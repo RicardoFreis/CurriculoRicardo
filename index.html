@@ -11,35 +11,38 @@
   <body class="bg-black text-white font-sans selection:bg-cyan-500 selection:text-black">
     <div id="app">
       <!-- Navigation -->
-      <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <span class="text-xl font-bold tracking-tighter uppercase">RFR<span class="text-cyan-500">.</span></span>
-          
-          <!-- Desktop Menu -->
-          <div class="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest text-white/60">
-            <a href="#sobre" class="hover:text-cyan-400 transition-colors">Sobre</a>
-            <a href="#experiencia" class="hover:text-cyan-400 transition-colors">Experiência</a>
-            <a href="#habilidades" class="hover:text-cyan-400 transition-colors">Habilidades</a>
-            <a href="#contato" class="hover:text-cyan-400 transition-colors">Contato</a>
-          </div>
-
-          <div class="flex items-center gap-4">
-            <a href="mailto:ricreis71@gmail.com" class="hidden sm:block px-6 py-2 border border-white/20 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300">Vamos Conversar</a>
+      <nav class="fixed top-0 w-full z-50">
+        <!-- Main Nav Bar -->
+        <div class="relative z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+          <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tighter uppercase">RFR<span class="text-cyan-500">.</span></a>
             
-            <!-- Mobile Menu Toggle -->
-            <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center border border-white/10 rounded-full hover:bg-white/5 transition-colors">
-              <i data-lucide="menu" class="w-5 h-5"></i>
-            </button>
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center gap-8 text-sm font-medium uppercase tracking-widest text-white/60">
+              <a href="#sobre" class="hover:text-cyan-400 transition-colors">Sobre</a>
+              <a href="#experiencia" class="hover:text-cyan-400 transition-colors">Experiência</a>
+              <a href="#habilidades" class="hover:text-cyan-400 transition-colors">Habilidades</a>
+              <a href="#contato" class="hover:text-cyan-400 transition-colors">Contato</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <a href="mailto:ricreis71@gmail.com" class="hidden sm:block px-6 py-2 border border-white/20 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300">Vamos Conversar</a>
+              
+              <!-- Mobile Menu Toggle -->
+              <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 flex items-center justify-center border border-white/10 rounded-full hover:bg-white/5 transition-colors">
+                <i data-lucide="menu" class="w-5 h-5"></i>
+              </button>
+            </div>
           </div>
         </div>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="fixed inset-0 bg-black z-[-1] flex flex-col items-center justify-center gap-8 text-2xl font-bold uppercase tracking-tighter transition-all duration-500 translate-x-full opacity-0 pointer-events-none">
-          <a href="#sobre" class="mobile-link hover:text-cyan-500 transition-colors">Sobre</a>
-          <a href="#experiencia" class="mobile-link hover:text-cyan-500 transition-colors">Experiência</a>
-          <a href="#habilidades" class="mobile-link hover:text-cyan-500 transition-colors">Habilidades</a>
-          <a href="#contato" class="mobile-link hover:text-cyan-500 transition-colors">Contato</a>
-          <a href="mailto:ricreis71@gmail.com" class="mobile-link mt-8 text-sm border border-white/20 px-8 py-4 rounded-full">Vamos Conversar</a>
+        <div id="mobile-menu" class="fixed inset-0 bg-black z-40 flex flex-col items-center justify-center gap-12 text-4xl font-bold uppercase tracking-tighter transition-all duration-500 translate-y-full opacity-0 pointer-events-none">
+          <a href="#sobre" class="mobile-link hover:text-cyan-500 transition-all duration-300 transform hover:scale-110">Sobre</a>
+          <a href="#experiencia" class="mobile-link hover:text-cyan-500 transition-all duration-300 transform hover:scale-110">Experiência</a>
+          <a href="#habilidades" class="mobile-link hover:text-cyan-500 transition-all duration-300 transform hover:scale-110">Habilidades</a>
+          <a href="#contato" class="mobile-link hover:text-cyan-500 transition-all duration-300 transform hover:scale-110">Contato</a>
+          <a href="mailto:ricreis71@gmail.com" class="mobile-link mt-12 text-base border border-cyan-500/30 bg-cyan-500/5 px-12 py-6 rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-500">Vamos Conversar</a>
         </div>
       </nav>
 

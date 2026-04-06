@@ -26,13 +26,13 @@ function toggleMenu() {
   isMenuOpen = !isMenuOpen;
   
   if (isMenuOpen) {
-    mobileMenu?.classList.remove('translate-x-full', 'opacity-0', 'pointer-events-none');
-    mobileMenu?.classList.add('translate-x-0', 'opacity-100');
+    mobileMenu?.classList.remove('translate-y-full', 'opacity-0', 'pointer-events-none');
+    mobileMenu?.classList.add('translate-y-0', 'opacity-100');
     if (mobileMenuBtn) mobileMenuBtn.innerHTML = '<i data-lucide="x" class="w-5 h-5"></i>';
     document.body.style.overflow = 'hidden';
   } else {
-    mobileMenu?.classList.add('translate-x-full', 'opacity-0', 'pointer-events-none');
-    mobileMenu?.classList.remove('translate-x-0', 'opacity-100');
+    mobileMenu?.classList.add('translate-y-full', 'opacity-0', 'pointer-events-none');
+    mobileMenu?.classList.remove('translate-y-0', 'opacity-100');
     if (mobileMenuBtn) mobileMenuBtn.innerHTML = '<i data-lucide="menu" class="w-5 h-5"></i>';
     document.body.style.overflow = '';
   }
