@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ricardo Furtado Reis | Desenvolvedor de Sistemas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-black text-white font-sans selection:bg-cyan-500 selection:text-black">
+    <div id="app">
+      <!-- Navigation -->
+      <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+          <span class="text-xl font-bold tracking-tighter uppercase">RFR<span class="text-cyan-500">.</span></span>
+          <div class="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest text-white/60">
+            <a href="#sobre" class="hover:text-cyan-400 transition-colors">Sobre</a>
+            <a href="#experiencia" class="hover:text-cyan-400 transition-colors">Experiência</a>
+            <a href="#habilidades" class="hover:text-cyan-400 transition-colors">Habilidades</a>
+            <a href="#contato" class="hover:text-cyan-400 transition-colors">Contato</a>
+          </div>
+          <a href="mailto:ricreis71@gmail.com" class="px-6 py-2 border border-white/20 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300">Vamos Conversar</a>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section class="relative min-h-screen flex flex-col justify-center px-6 pt-20 overflow-hidden">
+        <div class="absolute inset-0 -z-10">
+          <div class="absolute top-1/4 -left-20 w-96 h-96 bg-cyan-900/20 rounded-full blur-[120px]"></div>
+          <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-cyan-600/10 rounded-full blur-[120px]"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto w-full">
+          <div class="flex flex-col gap-4">
+            <span class="text-cyan-500 font-mono text-sm tracking-[0.3em] uppercase animate-fade-in">Desenvolvedor de Sistemas</span>
+            <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.85] uppercase">
+              Ricardo<br/>
+              <span class="text-transparent stroke-cyan-500" style="-webkit-text-stroke: 1px rgba(6, 182, 212, 0.5);">Furtado</span><br/>
+              Reis
+            </h1>
+            <p class="max-w-xl text-lg md:text-xl text-white/60 mt-8 leading-relaxed">
+              Focado em entregar código limpo e soluções eficientes. Mais de 8 anos transformando desafios complexos em sistemas robustos.
+            </p>
+            <div class="flex gap-6 mt-12">
+              <a href="#experiencia" class="group flex items-center gap-3 text-sm font-bold uppercase tracking-widest">
+                Ver Experiência
+                <span class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-cyan-500 group-hover:border-cyan-500 transition-all duration-300">
+                  <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="sobre" class="py-32 px-6 border-t border-white/5">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+          <div class="relative">
+            <div class="aspect-square bg-zinc-900 rounded-2xl overflow-hidden border border-white/10">
+              <img src="https://picsum.photos/seed/developer/800/800" alt="Ricardo Furtado Reis" class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer">
+            </div>
+            <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-cyan-500 flex items-center justify-center rounded-2xl rotate-12 hidden lg:flex">
+              <span class="text-black font-bold text-4xl leading-none tracking-tighter">+8<br/><span class="text-sm uppercase tracking-widest">Anos</span></span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-8">
+            <h2 class="text-4xl md:text-5xl font-bold tracking-tight uppercase">Sobre Mim</h2>
+            <p class="text-lg text-white/60 leading-relaxed italic">
+              "Desenvolvedor de sistemas com mais de 8 anos de experiência. Focado em entregar código limpo e soluções eficientes."
+            </p>
+            <div class="grid grid-cols-2 gap-8 mt-4">
+              <div>
+                <h4 class="text-cyan-500 font-mono text-xs uppercase tracking-widest mb-2">Localização</h4>
+                <p class="text-white/80">São Paulo, Brasil</p>
+              </div>
+              <div>
+                <h4 class="text-cyan-500 font-mono text-xs uppercase tracking-widest mb-2">Especialidade</h4>
+                <p class="text-white/80">Fullstack & Sistemas Legados</p>
+              </div>
+            </div>
+            <div class="flex gap-4 mt-8">
+              <a href="https://github.com/ricardofreis" target="_blank" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+                <i data-lucide="github" class="w-5 h-5"></i>
+              </a>
+              <a href="https://linkedin.com/in/ricardo-furtado-reis-04a47314a/" target="_blank" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+                <i data-lucide="linkedin" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experiencia" class="py-32 px-6 bg-zinc-950">
+        <div class="max-w-7xl mx-auto">
+          <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+            <h2 class="text-5xl md:text-7xl font-bold tracking-tighter uppercase leading-none">Experiência<br/><span class="text-cyan-500">Profissional</span></h2>
+            <p class="max-w-xs text-white/40 text-sm uppercase tracking-widest">Uma trajetória de evolução constante e entrega de valor.</p>
+          </div>
+
+          <div class="space-y-px border-y border-white/10">
+            <!-- Atos Brasil -->
+            <div class="group py-12 grid md:grid-cols-[1fr_2fr_1fr] gap-8 items-start hover:bg-white/5 transition-colors px-4 -mx-4">
+              <div class="flex flex-col gap-2">
+                <span class="text-cyan-500 font-mono text-sm">2021 — 2024</span>
+                <h3 class="text-2xl font-bold uppercase">Atos Brasil</h3>
+              </div>
+              <div class="space-y-4">
+                <p class="text-white/70 leading-relaxed">
+                  Liderança técnica em projetos financeiros internos, incluindo criação e manutenção de relatórios Excel complexos e tradução de sistemas para múltiplos idiomas (PT, ES, EN).
+                </p>
+                <ul class="space-y-2 text-sm text-white/50">
+                  <li class="flex gap-2">
+                    <span class="text-cyan-500">/</span>
+                    Projeto Locação Volkswagen: Processamento de arquivos XML para base SQL e geração de notas fiscais.
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-cyan-500">/</span>
+                    Projeto Locação CPFL Energia: Geração de scripts para criação de registros e manutenção de dados.
+                  </li>
+                </ul>
+              </div>
+              <div class="flex flex-wrap gap-2 md:justify-end">
+                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest">SQL</span>
+                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest">XML</span>
+                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest">Excel</span>
+              </div>
+            </div>
+
+            <!-- Hayashi Informática -->
+            <div class="group py-12 grid md:grid-cols-[1fr_2fr_1fr] gap-8 items-start hover:bg-white/5 transition-colors px-4 -mx-4">
+              <div class="flex flex-col gap-2">
+                <span class="text-cyan-500 font-mono text-sm">2017 — 2017</span>
+                <h3 class="text-2xl font-bold uppercase">Hayashi Informática</h3>
+              </div>
+              <div class="space-y-4">
+                <p class="text-white/70 leading-relaxed">
+                  Desenvolvimento completo de sistema de automação comercial e implementação de APIs críticas para o negócio.
+                </p>
+                <ul class="space-y-2 text-sm text-white/50">
+                  <li class="flex gap-2">
+                    <span class="text-cyan-500">/</span>
+                    Implementação de API para cálculo e emissão de cupom fiscal eletrônico.
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-cyan-500">/</span>
+                    Implementação de SAT-CF-e (Sistema Autenticador e Transmissor de Cupons Fiscais Eletrônicos).
+                  </li>
+                </ul>
+              </div>
+              <div class="flex flex-wrap gap-2 md:justify-end">
+                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest">API</span>
+                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest">SAT-CF-e</span>
+                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest">Automação</span>
+              </div>
+            </div>
+
+            <!-- Cedesi Informática -->
+            <div class="group py-12 grid md:grid-cols-[1fr_2fr_1fr] gap-8 items-start hover:bg-white/5 transition-colors px-4 -mx-4">
+              <div class="flex flex-col gap-2">
+                <span class="text-cyan-500 font-mono text-sm">2000 — 2003</span>
+                <h3 class="text-2xl font-bold uppercase">Cedesi Informática</h3>
+              </div>
+              <div class="space-y-4">
+                <p class="text-white/70 leading-relaxed">
+                  Manutenção e evolução de sistemas legados e novos, atendendo diversos setores críticos.
+                </p>
+                <ul class="space-y-2 text-sm text-white/50">
+                  <li class="flex gap-2">
+                    <span class="text-cyan-500">/</span>
+                    Sistemas atendidos: Contas a pagar/receber, Faturamento, Automação de Farmácia.
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-cyan-500">/</span>
+                    Folha de Pagamento, Contas Correntes, Controle de Estoque e Contabilidade.
+                  </li>
+                </ul>
+              </div>
+              <div class="flex flex-wrap gap-2 md:justify-end">
+                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest">Legacy</span>
+                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest">ERP</span>
+                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest">COBOL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="habilidades" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid lg:grid-cols-3 gap-20">
+            <div class="lg:col-span-1">
+              <h2 class="text-4xl font-bold uppercase mb-6">Habilidades<br/>Técnicas</h2>
+              <p class="text-white/50 leading-relaxed">
+                Um conjunto diversificado de ferramentas e tecnologias dominadas ao longo de quase uma década de carreira.
+              </p>
+            </div>
+            <div class="lg:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-px bg-white/10 border border-white/10">
+              <div class="bg-black p-8 flex flex-col gap-4 hover:bg-cyan-950/20 transition-colors">
+                <span class="text-cyan-500 font-mono text-xs">01</span>
+                <h4 class="font-bold uppercase tracking-widest">.NET / C#</h4>
+              </div>
+              <div class="bg-black p-8 flex flex-col gap-4 hover:bg-cyan-950/20 transition-colors">
+                <span class="text-cyan-500 font-mono text-xs">02</span>
+                <h4 class="font-bold uppercase tracking-widest">JavaScript</h4>
+              </div>
+              <div class="bg-black p-8 flex flex-col gap-4 hover:bg-cyan-950/20 transition-colors">
+                <span class="text-cyan-500 font-mono text-xs">03</span>
+                <h4 class="font-bold uppercase tracking-widest">SQL Server</h4>
+              </div>
+              <div class="bg-black p-8 flex flex-col gap-4 hover:bg-cyan-950/20 transition-colors">
+                <span class="text-cyan-500 font-mono text-xs">04</span>
+                <h4 class="font-bold uppercase tracking-widest">ASP.NET Core</h4>
+              </div>
+              <div class="bg-black p-8 flex flex-col gap-4 hover:bg-cyan-950/20 transition-colors">
+                <span class="text-cyan-500 font-mono text-xs">05</span>
+                <h4 class="font-bold uppercase tracking-widest">HTML5 / CSS3</h4>
+              </div>
+              <div class="bg-black p-8 flex flex-col gap-4 hover:bg-cyan-950/20 transition-colors">
+                <span class="text-cyan-500 font-mono text-xs">06</span>
+                <h4 class="font-bold uppercase tracking-widest">Git</h4>
+              </div>
+              <div class="bg-black p-8 flex flex-col gap-4 hover:bg-cyan-950/20 transition-colors">
+                <span class="text-cyan-500 font-mono text-xs">07</span>
+                <h4 class="font-bold uppercase tracking-widest">ASP.NET MVC</h4>
+              </div>
+              <div class="bg-black p-8 flex flex-col gap-4 hover:bg-cyan-950/20 transition-colors">
+                <span class="text-cyan-500 font-mono text-xs">08</span>
+                <h4 class="font-bold uppercase tracking-widest">COBOL</h4>
+              </div>
+              <div class="bg-black p-8 flex flex-col gap-4 hover:bg-cyan-950/20 transition-colors">
+                <span class="text-cyan-500 font-mono text-xs">09</span>
+                <h4 class="font-bold uppercase tracking-widest">Azure</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education & Courses -->
+      <section class="py-32 px-6 bg-zinc-950 border-y border-white/5">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
+          <div>
+            <h2 class="text-3xl font-bold uppercase mb-12 flex items-center gap-4">
+              <i data-lucide="graduation-cap" class="text-cyan-500"></i>
+              Educação
+            </h2>
+            <div class="space-y-12">
+              <div class="relative pl-8 border-l border-white/10">
+                <div class="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-cyan-500"></div>
+                <h4 class="font-bold uppercase">Universidade São Judas Tadeu</h4>
+                <p class="text-white/40 text-sm">Incompleto (2º Ano)</p>
+              </div>
+              <div class="relative pl-8 border-l border-white/10">
+                <div class="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-cyan-500"></div>
+                <h4 class="font-bold uppercase">Colégio Brasil</h4>
+                <p class="text-white/40 text-sm">Concluído</p>
+              </div>
+              <div class="relative pl-8 border-l border-white/10">
+                <div class="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-cyan-500"></div>
+                <h4 class="font-bold uppercase">Escola Alvino Bittencourt</h4>
+                <p class="text-white/40 text-sm">Concluído</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold uppercase mb-12 flex items-center gap-4">
+              <i data-lucide="award" class="text-cyan-500"></i>
+              Certificações (DIO.ME)
+            </h2>
+            <div class="grid grid-cols-1 gap-4">
+              <div class="p-4 border border-white/10 rounded-lg hover:border-cyan-500/50 transition-colors">
+                <p class="text-sm font-medium">Santander 2025 - Introdução à Experiência</p>
+              </div>
+              <div class="p-4 border border-white/10 rounded-lg hover:border-cyan-500/50 transition-colors">
+                <p class="text-sm font-medium">Computação em Nuvem (Azure)</p>
+              </div>
+              <div class="p-4 border border-white/10 rounded-lg hover:border-cyan-500/50 transition-colors">
+                <p class="text-sm font-medium">Desenvolvimento Web com JavaScript</p>
+              </div>
+              <div class="p-4 border border-white/10 rounded-lg hover:border-cyan-500/50 transition-colors">
+                <p class="text-sm font-medium">Protocolo HTTP e Integração com PokeAPI</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contato" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+          <h2 class="text-6xl md:text-8xl font-bold tracking-tighter uppercase mb-12">Vamos<br/><span class="text-cyan-500">Trabalhar?</span></h2>
+          <div class="flex flex-col md:flex-row justify-center gap-12 mt-20">
+            <a href="mailto:ricreis71@gmail.com" class="flex flex-col items-center gap-4 group">
+              <div class="w-20 h-20 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-cyan-500 group-hover:border-cyan-500 transition-all duration-500">
+                <i data-lucide="mail" class="w-8 h-8"></i>
+              </div>
+              <span class="text-sm font-mono uppercase tracking-widest text-white/40 group-hover:text-white transition-colors">ricreis71@gmail.com</span>
+            </a>
+            <a href="tel:+5511983632445" class="flex flex-col items-center gap-4 group">
+              <div class="w-20 h-20 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-cyan-500 group-hover:border-cyan-500 transition-all duration-500">
+                <i data-lucide="phone" class="w-8 h-8"></i>
+              </div>
+              <span class="text-sm font-mono uppercase tracking-widest text-white/40 group-hover:text-white transition-colors">(11) 98363-2445</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="py-12 px-6 border-t border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+          <span class="text-xs font-mono uppercase tracking-widest text-white/20">© 2026 Ricardo Furtado Reis</span>
+          <div class="flex gap-8 text-xs font-mono uppercase tracking-widest text-white/20">
+            <a href="https://github.com/ricardofreis" target="_blank" class="hover:text-white transition-colors">Github</a>
+            <a href="https://linkedin.com/in/ricardo-furtado-reis-04a47314a/" target="_blank" class="hover:text-white transition-colors">Linkedin</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+
