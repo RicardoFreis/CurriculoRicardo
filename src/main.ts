@@ -1,4 +1,4 @@
-import { createIcons, Menu, X, Smartphone, Phone, Mail, Linkedin, Github, Home, Award, ChevronRight } from 'lucide';
+import { createIcons, Menu, X, Smartphone, Phone, Mail, Linkedin, Github, Home, Award, ChevronRight, Copyright } from 'lucide';
 import './index.css';
 
 // Initialize Lucide icons
@@ -13,7 +13,8 @@ createIcons({
     Github,
     Home,
     Award,
-    ChevronRight
+    ChevronRight,
+    Copyright
   }
 });
 
@@ -63,6 +64,14 @@ mobileLinks.forEach(link => {
           });
         }, 300);
       }
+    } else {
+      // If targetId is '#' (Inicio), scroll to top
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }, 300);
     }
   });
 });
@@ -80,6 +89,12 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
           block: 'start'
         });
       }
+    } else {
+      // If targetId is '#' (Inicio), scroll to top
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     }
   });
 });
