@@ -40,7 +40,20 @@ const certificates = [
   { title: "Manipulando Valores com C#", img: "https://assets.dio.me/_phATy5665mrPoHRSsuu3z2UlRfoAxNfks5oBa_Anng/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9QUVczNTFCVy5qcGc" },
   { title: "Propriedades, Métodos e Construtores com C#", img: "https://assets.dio.me/djZMh5YsMATWMVtX87BSapEPZEGQKt7ZtzPcrsAkBjw/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9WSjVKTVhLSi5qcGc" },
   { title: "Estrutura de Dados com C#", img: "https://assets.dio.me/9DhSLaLFGvSPppOcFqbMwZqP0JdqrJqFGIWGc3DNeqg/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8xNUxIR1g0WC5qcGc" },
-  { title: "Construindo um Sistema para um Estacionamento com C#", img: "https://assets.dio.me/MMN9dxwPja4g_FbLb8uHosyz6YFsHOJ17ZRUhwfsGxY/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9TTkQxT0dGQy5qcGc" }
+  { title: "Construindo um Sistema para um Estacionamento com C#", img: "https://assets.dio.me/MMN9dxwPja4g_FbLb8uHosyz6YFsHOJ17ZRUhwfsGxY/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9TTkQxT0dGQy5qcGc" },
+  { title: "Array e Listas em C#", img: "https://assets.dio.me/GjZKM_yVq8mmK32QMEfQIHhGeewh8hRChAqMfonus4Y/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9aWlJJQ1JNUC5qcGc" },
+  { title: "Conhecendo a Organização de um Programa C#", img: "https://assets.dio.me/D2-r5evp9ZgI63usiHyWpY2iQceqx2AnxXrKlHx-7Rc/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8yTktGTDNSVi5qcGc" },
+  { title: "Conhecendo as Estruturas de Repetição em C#", img: "https://assets.dio.me/KFP7tPCEJ1j9OlVB-1CijDFINufkk_c0GcERSlpQFYc/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9MVUVJNllTVS5qcGc" },
+  { title: "Introdução ao .NET e Controle de Versão com Git", img: "https://assets.dio.me/4ikwVl6QjuXZ1ac4ewwlTfBb3KkyqLjkEoiy-ffApM8/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9KRFZEWUpJQi5qcGc" },
+  { title: "Introdução ao React", img: "https://assets.dio.me/Hh2qp7xSMHwd7aZd_R8PHF_pQMvcGhHvM-c00Zou2oU/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9LT0VQWFRTQi5qcGc" },
+  { title: "Live de Lançamento Akad - Fullstack Developer", img: "https://assets.dio.me/SRMpg48chrv0iGkBknpCR7cABDuGYYpkIPO59mtwjlA/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9YUjUxMlpINy5qcGc" },
+  { title: "Componentes Funcionais no React", img: "https://assets.dio.me/yWwoRugxyOtrefN-KSWZ-FB36B7jd7anu5KWSUXMkEA/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9UUFlVNUNZVi5qcGc" },
+  { title: "Criando Aplicações React com Vite", img: "https://assets.dio.me/pPG64FvZ-7gC6HEkM6xQ-i-LB3tgPnCjbMD-b0ndkeA/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9VRjFEMlZQSC5qcGc" },
+  { title: "Empacotadores e Compiladores no React", img: "https://assets.dio.me/mN74y1_j_iybbcH5tycqD9vI4b0ZQFaIB80zufRySns/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9QNkxUWklZUC5qcGc" },
+  { title: "Preparando o Ambiente de Desenvolvimento React", img: "https://assets.dio.me/kBdflBnEbfvgKg0y1ff9tSU0g4lqtv33ms1XBaLkSwo/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9DWE84UUhHVS5qcGc" },
+  { title: "Conhecendo o React", img: "https://assets.dio.me/BQYhU0SaVsz7MP2sPX_nXir9GuJvgj2AsKJRRX-FF2w/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9BTFRFUFJLQi5qcGc" },
+  { title: "Estrutura de Dados JSON", img: "https://assets.dio.me/5_GfI2nbBXxi8WPnCME_DT2NdVJ9QJpqWeWVGhPudng/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9LVVpEMEI3RS5qcGc" },
+  { title: "Importação e Exportação com JavaScript", img: "https://assets.dio.me/O9hg9xP-3mG3bkA_VmE3bj4rZXm7FSzJR4InkzpM97k/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9FRldYWFBTOS5qcGc" }
 ];
 
 // Pagination State
@@ -155,7 +168,23 @@ function updateUI() {
 function openModal(cert: { title: string, img: string }) {
   if (!certModal || !certModalImg || !certModalTitle) return;
   
-  certModalImg.src = cert.img;
+  // Request a higher resolution image from DIO's CDN for the modal
+  // We use regex to be more robust and provide a fallback
+  const highResImg = cert.img
+    .replace(/\/h:\d+\//, '/h:1080/')
+    .replace(/\/w:\d+\//, '/w:1920/')
+    .replace(/\/q:\d+\//, '/q:100/');
+    
+  certModalImg.src = highResImg;
+  
+  // Fallback to original image if high-res fails
+  certModalImg.onerror = () => {
+    if (certModalImg.src !== cert.img) {
+      console.warn('High-res image failed to load, falling back to original');
+      certModalImg.src = cert.img;
+    }
+  };
+
   certModalTitle.innerText = cert.title;
   certModal.classList.remove('hidden');
   document.body.style.overflow = 'hidden';
