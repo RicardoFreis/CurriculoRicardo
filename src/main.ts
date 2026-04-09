@@ -1,5 +1,6 @@
-import { createIcons, Menu, X, Smartphone, Phone, Mail, Linkedin, Github, Home, Award, ChevronRight, ChevronLeft, Copyright, Search } from 'lucide';
+import { createIcons, Menu, X, Smartphone, Phone, Mail, Linkedin, Github, Home, Award, ChevronRight, ChevronLeft, Copyright, Search, Printer } from 'lucide';
 import './index.css';
+import { jsPDF } from 'jspdf';
 
 // Icons configuration
 const iconsConfig = {
@@ -16,7 +17,8 @@ const iconsConfig = {
     ChevronRight,
     ChevronLeft,
     Copyright,
-    Search
+    Search,
+    Printer
   }
 };
 
@@ -515,4 +517,171 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
       });
     }
   });
+});
+
+// PDF Generation Logic
+const printBtn = document.getElementById('print-btn');
+printBtn?.addEventListener('click', () => {
+  const doc = new jsPDF();
+  const margin = 20;
+  let y = margin;
+  const pageWidth = doc.internal.pageSize.getWidth();
+  const pageHeight = doc.internal.pageSize.getHeight();
+
+  const checkNewPage = (neededHeight: number) => {
+    if (y + neededHeight > pageHeight - margin) {
+      doc.addPage();
+      y = margin;
+      return true;
+    }
+    return false;
+  };
+
+  // Header
+  doc.setFontSize(22);
+  doc.setTextColor(0, 180, 216); // Cyan
+  doc.text('RICARDO FURTADO REIS', margin, y);
+  y += 10;
+  
+  doc.setFontSize(12);
+  doc.setTextColor(100);
+  doc.text('Desenvolvedor de Sistemas', margin, y);
+  y += 15;
+
+  // Contact Info
+  doc.setFontSize(10);
+  doc.setTextColor(0);
+  doc.text('WhatsApp: (011) 98363-2445', margin, y);
+  y += 6;
+  doc.text('Email: ricreis71@gmail.com', margin, y);
+  y += 6;
+  doc.text('LinkedIn: linkedin.com/in/ricardo-furtado-reis-04a47314a/', margin, y);
+  y += 6;
+  doc.text('GitHub: github.com/RicardoFreis', margin, y);
+  y += 15;
+
+  // Sobre
+  doc.setFontSize(14);
+  doc.setTextColor(0, 180, 216);
+  doc.text('SOBRE', margin, y);
+  y += 8;
+  doc.setFontSize(10);
+  doc.setTextColor(0);
+  const sobreText = "Desenvolvedor de sistemas com experiência em projetos financeiros, automação comercial e integração de sistemas. Focado em entregar código limpo e soluções eficientes.";
+  const splitSobre = doc.splitTextToSize(sobreText, pageWidth - (margin * 2));
+  doc.text(splitSobre, margin, y);
+  y += (splitSobre.length * 5) + 10;
+
+  // Experiência
+  doc.setFontSize(14);
+  doc.setTextColor(0, 180, 216);
+  doc.text('EXPERIÊNCIA PROFISSIONAL', margin, y);
+  y += 8;
+
+  const experiences = [
+    { 
+      company: 'Atos Brasil', 
+      role: 'Analista Programador', 
+      period: '2021 - 2024',
+      description: 'Projetos financeiros internos (PT, ES, EN); Locação Volkswagen (XML/SQL/Notas Fiscais); Locação CPFL Energia (Scripts/Manutenção).'
+    },
+    { 
+      company: 'Hayashi Informática', 
+      role: 'Analista Programador', 
+      period: '2017',
+      description: 'Automação comercial; API para cupom fiscal eletrônico; SAT-CF-e.'
+    },
+    { 
+      company: 'Cedesi Informática', 
+      role: 'Programador', 
+      period: '2000 - 2003',
+      description: 'Sistemas legados e novos: Contas a pagar/receber, Faturamento, Farmácia, Folha, Estoque e Contabilidade.'
+    },
+    { 
+      company: 'Cedesi Informática', 
+      role: 'Programador', 
+      period: '1991 - 1996',
+      description: 'Sistemas legados e novos: Contas a pagar/receber, Faturamento, Farmácia, Folha, Estoque e Contabilidade.'
+    }
+  ];
+
+  experiences.forEach(exp => {
+    checkNewPage(25);
+    doc.setFontSize(11);
+    doc.setFont('helvetica', 'bold');
+    doc.text(`${exp.role} - ${exp.company}`, margin, y);
+    y += 5;
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(9);
+    doc.setTextColor(100);
+    doc.text(exp.period, margin, y);
+    y += 5;
+    doc.setTextColor(0);
+    doc.setFontSize(9);
+    const splitDesc = doc.splitTextToSize(exp.description, pageWidth - (margin * 2));
+    doc.text(splitDesc, margin, y);
+    y += (splitDesc.length * 5) + 5;
+  });
+
+  y += 5;
+
+  // Educação
+  checkNewPage(30);
+  doc.setFontSize(14);
+  doc.setTextColor(0, 180, 216);
+  doc.text('EDUCAÇÃO', margin, y);
+  y += 8;
+  doc.setFontSize(10);
+  doc.setTextColor(0);
+  doc.text('Engenharia da Computação - Universidade São Judas Tadeu (Não concluído, encerrado no 2o ano)', margin, y);
+  y += 6;
+  doc.text('Processamento de Dados - Colégio Brasil (Concluído)', margin, y);
+  y += 6;
+  doc.text('Ensino Primário - Escola Alvino Bittencourt (Concluído)', margin, y);
+  y += 15;
+
+  // Cursos e Certificações
+  checkNewPage(30);
+  doc.setFontSize(14);
+  doc.setTextColor(0, 180, 216);
+  doc.text('CURSOS E CERTIFICAÇÕES', margin, y);
+  y += 8;
+  doc.setFontSize(8);
+  doc.setTextColor(0);
+
+  // List more certificates to fill 2nd page
+  const topCerts = certificates.slice(0, 100);
+  const col1X = margin;
+  const col2X = margin + (pageWidth - margin * 2) / 2;
+  
+  for (let i = 0; i < topCerts.length; i += 2) {
+    if (checkNewPage(6)) {
+      // If we are on page 3, stop
+      if (doc.getNumberOfPages() > 2) {
+        // Remove the last page if it's empty or just started
+        doc.deletePage(3);
+        break;
+      }
+      doc.setFontSize(14);
+      doc.setTextColor(0, 180, 216);
+      doc.text('CURSOS E CERTIFICAÇÕES (Cont.)', margin, y);
+      y += 8;
+      doc.setFontSize(8);
+      doc.setTextColor(0);
+    }
+    
+    doc.text(`• ${topCerts[i].title.substring(0, 55)}`, col1X, y);
+    if (topCerts[i+1]) {
+      doc.text(`• ${topCerts[i+1].title.substring(0, 55)}`, col2X, y);
+    }
+    y += 4;
+  }
+
+  // Footer
+  y = pageHeight - 15;
+  doc.setFontSize(8);
+  doc.setTextColor(150);
+  doc.text('Para acessar todos os cursos acesse a versão digital: www.ricardo.com.br', pageWidth / 2, y, { align: 'center' });
+
+  doc.save('Curriculo_Ricardo_Furtado_Reis.pdf');
 });
