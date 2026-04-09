@@ -95,7 +95,7 @@ const certificates = [
   { title: "Trabalhando Com Estruturas de Decisão (Estrutura Switch Case)", img: "https://assets.dio.me/T09KTiuH7ZZAdCcWZrt0ayuocdhq8ZQDW_6aFFiRtN0/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9WV0QyQ1RPUS5qcGc" },
   { title: "Trabalhando Com Estruturas Condicionais (if, else if, else)", img: "https://assets.dio.me/60P7qNSukQu4Et6L_-hkYQjMeKHAF8RslYnACx_TtP8/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9DU01EOUhFMi5qcGc" },
   { title: "Criando e Manipulando Vetores e Matrizes", img: "https://assets.dio.me/G8SQ1c4fw33g5yWThC9m0HCA1rUqCF9RCXMO2p4zA6k/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8yWDdUS0RIUi5qcGc" },
-  { title: "Trabalhando com Variáveis", img: "https://assets.dio.me/szUKTko0Mw9_khIViMExza4GaUmNYsc3zuHuaC11zhI/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci89MElOT05URy5qcGc" },
+  { title: "Trabalhando com Variáveis", img: "https://assets.dio.me/szUKTko0Mw9_khIViMExza4GaUmNYsc3zuHuaC11zhI/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci85MElOT05URy5qcGc" },
   { title: "Estrutura de um Software e Seu Ambiente de Desenvolvimento", img: "https://assets.dio.me/KPfyL4OJKYij6haIxZ4v5nMepBSmvRld7anQfn26VuM/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci83UVdCUDMwRy5qcGc" },
   { title: "Entendendo Algoritmos e Fluxogramas", img: "https://assets.dio.me/hEOWVlJNrVpsoR2Wg18n2uxxZd6zu2rFgPeMZbforJc/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9BU0kwTkVZMi5qcGc" },
   { title: "Criando um Jogo do Detona Ralph com JavaScript", img: "https://assets.dio.me/m56ijB54AXSRCK573r-pWdZFEBERioW3h6EMFujFfpk/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci85V1VGV05IRS5qcGc" },
@@ -182,7 +182,7 @@ const certificates = [
   { title: "Introdução ao Desenvolvimento Moderno de Software", img: "https://assets.dio.me/-AaLYhQAx7sgQQnlRbexhjJVhphnvNUMNMyvwE34HvQ/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci85QkM1QjIxRS5qcGc" },
   { title: "Seja Protagonista Neste Bootcamp", img: "https://assets.dio.me/Es6AT1Z7PPbxg0XBUKj9qIyZAfj0RXzchzFOB-8OPGI/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9GNzA3MDhFOC5qcGc" },
   { title: "Boas-vindas ao Bootcamp Cloud AWS", img: "https://assets.dio.me/LYthgUt90Tp_TEMGLkiCRJofvqulz1kmjOTheYosVEI/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci83QkZDRDExMi5qcGc" },
-  { title: "Conheça as Oportunidades da DIO", img: "https://assets.dio.me/RS90euY7mu9J9BriuDBYAdeZcrPPWJ_Yyo3roN1KkxY/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9DQkE3QUZFNi5qcGc" },
+  { title: "Conheça as Oportunidades da DIO", img: "https://assets.dio.me/RS90euY7mu9J9BriuDBYAdeZcrPPWJ_Yyo3roN1KkxY/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9DQkU3QUZFNi5qcGc" },
   { title: "Conceitos de responsividade e experiência do usuário", img: "https://assets.dio.me/D-Ay10JkUMWaGrwmEXYMDSdHa0O3Z6CTIPp1entuCrk/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci83NDVGQkEwRi5qcGc" },
   { title: "Boas-vindas ao Bootcamp Eduzz Fullstack Developer #3", img: "https://assets.dio.me/hH2pr__KDWonk4_iI_5AqgZUtoZDOcB9ZDc2Z01SfVc/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9CMEQzNjY1RC5qcGc" },
   { title: "Introdução ao TypeScript: Explorando Classes, Tipos e Interfaces", img: "https://assets.dio.me/Q5hOj3QbVnuMWkV7f5QfuAS2JIGrE7hmoYus7k_y75A/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9CNEI0NUQyRi5qcGc" },
@@ -315,13 +315,13 @@ function renderPagination() {
 
   // Left Arrow
   const prevBtn = document.createElement('button');
-  prevBtn.className = `p-2 rounded-lg border border-white/10 hover:bg-white/5 transition-all ${currentPage === 1 ? 'opacity-30 cursor-not-allowed' : ''}`;
-  prevBtn.innerHTML = '<i data-lucide="chevron-left" class="w-5 h-5"></i>';
+  prevBtn.className = `p-1 rounded-lg border border-white/10 hover:bg-white/5 transition-all ${currentPage === 1 ? 'opacity-30 cursor-not-allowed' : ''}`;
+  prevBtn.innerHTML = '<i data-lucide="chevron-left" class="w-4 h-4"></i>';
   prevBtn.disabled = currentPage === 1;
   prevBtn.onclick = () => {
     if (currentPage > 1) {
       currentPage--;
-      updateUI();
+      updateUI(false);
     }
   };
   certPagination.appendChild(prevBtn);
@@ -336,7 +336,7 @@ function renderPagination() {
 
   for (let i = startPage; i <= endPage; i++) {
     const pageBtn = document.createElement('button');
-    pageBtn.className = `w-10 h-10 rounded-lg border font-bold transition-all ${
+    pageBtn.className = `w-7 h-7 rounded-lg border text-[10px] font-bold transition-all ${
       currentPage === i 
         ? 'bg-cyan-500 border-cyan-500 text-black' 
         : 'border-white/10 hover:bg-white/5 text-white/60 hover:text-white'
@@ -344,20 +344,20 @@ function renderPagination() {
     pageBtn.innerText = i.toString();
     pageBtn.onclick = () => {
       currentPage = i;
-      updateUI();
+      updateUI(false);
     };
     certPagination.appendChild(pageBtn);
   }
 
   // Right Arrow
   const nextBtn = document.createElement('button');
-  nextBtn.className = `p-2 rounded-lg border border-white/10 hover:bg-white/5 transition-all ${currentPage === totalPages ? 'opacity-30 cursor-not-allowed' : ''}`;
-  nextBtn.innerHTML = '<i data-lucide="chevron-right" class="w-5 h-5"></i>';
+  nextBtn.className = `p-1 rounded-lg border border-white/10 hover:bg-white/5 transition-all ${currentPage === totalPages ? 'opacity-30 cursor-not-allowed' : ''}`;
+  nextBtn.innerHTML = '<i data-lucide="chevron-right" class="w-4 h-4"></i>';
   nextBtn.disabled = currentPage === totalPages;
   nextBtn.onclick = () => {
     if (currentPage < totalPages) {
       currentPage++;
-      updateUI();
+      updateUI(false);
     }
   };
   certPagination.appendChild(nextBtn);
