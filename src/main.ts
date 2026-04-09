@@ -1,4 +1,4 @@
-import { createIcons, Menu, X, Smartphone, Phone, Mail, Linkedin, Github, Home, Award, ChevronRight, ChevronLeft, Copyright } from 'lucide';
+import { createIcons, Menu, X, Smartphone, Phone, Mail, Linkedin, Github, Home, Award, ChevronRight, ChevronLeft, Copyright, Search } from 'lucide';
 import './index.css';
 
 // Icons configuration
@@ -15,7 +15,8 @@ const iconsConfig = {
     Award,
     ChevronRight,
     ChevronLeft,
-    Copyright
+    Copyright,
+    Search
   }
 };
 
@@ -114,17 +115,151 @@ const certificates = [
   { title: "Live de Lançamento: Randstad - Backend com .NET", img: "https://assets.dio.me/A230-wxzvrm-_r7qiuLeQVS5Ya2SmqTfPULhPxB8hgU/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8wM0UxSkZGVy5qcGc" },
   { title: "Introdução as IDEs e Configuração de Ambiente .NET", img: "https://assets.dio.me/kshWJqY31GbmFPNWZ5YTe0ECyFSXC4iJAzCBNdujKmw/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9SNVJER0ZDSS5qcGc" },
   { title: "Introdução ao Desenvolvimento Backend com .NET com a Randstad", img: "https://assets.dio.me/G4Q5nBC85oG-wlHJwzwtiFuu2-4LwPGPUXZe3dpT2L4/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9aOEtPNTJTSy5qcGc" },
-  { title: "Introdução ao .NET", img: "https://assets.dio.me/s2p3KRpux8qCNB47cKwdsw81Q7p_uYbTLBBrXSfh7A0/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9TV1lYTldKSy5qcGc" }
+  { title: "Introdução ao .NET", img: "https://assets.dio.me/s2p3KRpux8qCNB47cKwdsw81Q7p_uYbTLBBrXSfh7A0/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9TV1lYTldKSy5qcGc" },
+  { title: "Introdução ao HTML na Prática", img: "https://assets.dio.me/Yj3sABcg1L5xxtT6EDYtNJR0XpkKOU0PsSmVWP2Px-I/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9FRU1aS01MMS5qcGc" },
+  { title: "Princípios de Desenvolvimento de Software Colaborativo", img: "https://assets.dio.me/D75Q1_UWegytYIP6LBXt96_ueg50wgTXnKHGILZtHYU/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9LQzhaUkhJRy5qcGc" },
+  { title: "Live de Lançamento: Ri Happy - Front-end do Zero", img: "https://assets.dio.me/ivZoPd9upcK2cLQ_Wpv9JNnqliQ6TEvn2CPbD7UcoTY/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9DQ0tLTVdPRC5qcGc" },
+  { title: "Contribuindo em um Projeto Open Source no GitHub", img: "https://assets.dio.me/-uOsHGNXe-__2npqOYX-LIQIuRCkFLsxGQcVJcJTGXk/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8xWTJTTU1aTC5qcGc" },
+  { title: "Desafios de Projetos: Crie Um Portfólio Vencedor", img: "https://assets.dio.me/6xU6xL-3CjEkjDHccW-zjViIOjUCIX9EjUmgREBYPuo/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9ENTBQUFVCOS5qcGc" },
+  { title: "Versionamento de Código com Git e GitHub", img: "https://assets.dio.me/M5HsXHx9M7NK_gVs77pQ66dEb9cv5mZUn3bqlZ08hws/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9DTjNDWUEwSC5qcGc" },
+  { title: "Entendendo Comunicação Client x Server", img: "https://assets.dio.me/PeF19LbD9ZAh3CSgL6VNpADeQl6MZaC8Vi5Leg5Z1BU/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci84REJRQ0xKNS5qcGc" },
+  { title: "Introdução ao Desenvolvimento Front-end com a Ri Happy", img: "https://assets.dio.me/qj1kLI7MjbSGHLeIiyymk5k-JmHGz1Fuo2ZeczvYrQI/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9YRUlHWUdQUi5qcGc" },
+  { title: "Primeiros Passos Com JavaScript", img: "https://assets.dio.me/HES1sAQ-uRdJR3Z6UgQsqEa8MAi1uf81lNEaFFw8Wuk/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9SWk1QWFlaOC5qcGc" },
+  { title: "Aula Inaugural - Santander Bootcamps 2023", img: "https://assets.dio.me/oz3pOb58sZWWMwhdJx1rWKgxXZ7jAg9vllDt22U5lDM/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9HTzZMUUw5Mi5qcGc" },
+  { title: "Conheça o Banco Carrefour", img: "https://assets.dio.me/wO0tEMvEAJbjOFGbRccimiVs_rzRI8Wa8ya4_Qz8VzA/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9SUkpMTTdZTy5qcGc" },
+  { title: "Introdução ao domain driven design e padrões de arquitetura", img: "https://assets.dio.me/fqQcks5NQHe7YVOMoFELJ3gFksrz_nDbnffWpdjDcEM/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9TTllOMDZURi5qcGc" },
+  { title: "Formação Angular Developer", img: "https://assets.dio.me/0sWAD6EttBMh6xWWF9N8cmoCKrLlRATZG-5WBpx3-xY/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9CWFdYTEFCSi5qcGc" },
+  { title: "Manipulando Fluxos no Angular", img: "https://assets.dio.me/F_WZ-G85FP2_ox8hoPLPwlVOToBy9FjeQgJDBOxSONM/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9NVEFUMk0wSS5qcGc" },
+  { title: "Avalie a Formação de Angular Developer", img: "https://assets.dio.me/-En_S5F1tUq_wRdiSQo23-Xnkz7zUKmK6mYfjbkH31w/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9XUkVaRzlXSi5qcGc" },
+  { title: "Materiais Complementares - Manipulando Fluxos no Angular", img: "https://assets.dio.me/eXNQPkFYPl-K0twgKlAqShWBZHeSrTJJjRe5YEOIqQA/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9WNUtYQlM3Si5qcGc" },
+  { title: "Criando um Clone do BuzzFeed com Angular", img: "https://assets.dio.me/-0S1hHjgESPtrhXMT_iKzjSgn-SEjzIWVUwjKkVacGs/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9CNlZZTzVEWi5qcGc" },
+  { title: "Trabalhando com Guards no Angular", img: "https://assets.dio.me/IpEY2iVex2ZQ1yN0-yed5q-SIN8sWH96Lzjofl9wb2Y/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci81S01YTEhCUy5qcGc" },
+  { title: "Trabalhando com Pipes no Angular", img: "https://assets.dio.me/r0cC8ISkG7DLdIwcoOqmZf5smNVHKZ0HR-qx8ACZmEo/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9VUUNHN1hWUy5qcGc" },
+  { title: "Aplicações Inteligentes com Angular", img: "https://assets.dio.me/5rURQmCIvzG_vJYmfMgu7Q6ulM6pUBKPSRb8E8YyLjw/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9ENlNEMDEyRS5qcGc" },
+  { title: "Materiais complementares - Aplicações inteligentes com Angular", img: "https://assets.dio.me/9lIEbYZUL7ZJ0tptcKjwT3_NLWws9ZAU82HRq3-Nmq8/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9IN0dFQUNCSi5qcGc" },
+  { title: "Recriando a Interface da PlayStation Store com Angular", img: "https://assets.dio.me/oxSqa9QIEIHjZLrusH8d7bs0QEA0S_VPEIHE8ZSDCRQ/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9BRlpIUk5JSy5qcGc" },
+  { title: "Single Page Application com Angular", img: "https://assets.dio.me/ceiRd9jGDgxnMBjvIRc8BEG1kkuxZI3DLDMqpcfCIs4/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9QNkpGWEJBMC5qcGc" },
+  { title: "Mentoria Bônus: React vs. Angular - Existe Realmente uma Batalha?", img: "https://assets.dio.me/oVeUz6njS2H-jnMArANaVEF7H0s3_f0w8FIz3FFVSYM/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci80SlM4Qlg2Si5qcGc" },
+  { title: "Trabalhando com Services no Angular", img: "https://assets.dio.me/u525VXmQ5LCeEN8t4G-mX0TzRckTA6XTXDuTDP4GCSo/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9WU1pPR1NWMC5qcGc" },
+  { title: "Trabalhando com Rotas no Angular", img: "https://assets.dio.me/GwCEbWgXh0msA2sOJJUqKn7yxZf00xpOoQ7kZX7nhWw/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9KVkVLQ0FCRS5qcGc" },
+  { title: "Criando um E-commerce Simples de Filmes com Angular", img: "https://assets.dio.me/XTSpQIyIJJ8K7sLWBCVRQBnK9VKA5sH5vvgDC8UF4CM/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9MTVhIVzJSUy5qcGc" },
+  { title: "Materiais Complementares: Single Page Application com Angular", img: "https://assets.dio.me/th9sEP6xfMP4_I6zvduA7_DoGxbgwaun11G_cmdH6cU/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9RTURNWVlTMS5qcGc" },
+  { title: "Criando um Blog com Angular", img: "https://assets.dio.me/HZgYVmLWhVxaRhborg4a2P-DjvJvGgq9TxDIQ7Hk8H4/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8zTUlYOVBIRC5qcGc" },
+  { title: "Introdução à Inteligência Artificial", img: "https://assets.dio.me/ZVSV4EOa8J7tCAnh2zKDgLCDHOIKxo-63zgEMjI9IXk/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9aN1pHWUs3UC5qcGc" },
+  { title: "Introdução ao Exame de Certificação AWS Cloud Practitioner", img: "https://assets.dio.me/vh6RMBJH7RA9ro_hbtDBpMBlRhprkW9-Kh2Mqn9KJbk/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9OTVdUMFhWWC5qcGc" },
+  { title: "Módulos Angular", img: "https://assets.dio.me/5WlWLCbwyOl8dfXrsMO7Z7ymuoVUCs-4wz5nj7pox0Q/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8wUEtWTlNVNi5qcGc" },
+  { title: "Single Page Application com Angular", img: "https://assets.dio.me/u4MnhUHwrUk3DAYEO7ZGCX_4PkhamuyOcTVeY2sPwrw/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9VTUFITVk0Mi5qcGc" },
+  { title: "Introdução ao Angular", img: "https://assets.dio.me/npWWzNd-SZ7zzo6b2CC_K-Jd_CKtUw2dukWadd4CB7w/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9YSUxIQzdEVy5qcGc" },
+  { title: "Materiais Complementares: Introdução ao Angular", img: "https://assets.dio.me/MxVaZFzfXkcu0dF3DpWcaxdxzuTsvIXLXoU5Cn0agic/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9KSVFCODlYSi5qcGc" },
+  { title: "LifeCycle Hooks Angular", img: "https://assets.dio.me/j0JyqG6f5Sudgvv-r7rksJUa_BB-M3KrOjHmJHST9os/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9YVVdSVjJYTi5qcGc" },
+  { title: "Fundamentos do Angular Framework", img: "https://assets.dio.me/kXIazKuqSY_fDzgXScGzah0b9gVqOdYDH0Eb0u-MMkQ/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9LTkRRRVg0QS5qcGc" },
+  { title: "Trabalhando com Componentes Angular", img: "https://assets.dio.me/dZoGMK8cV8bdUXXuVL360J-IBVlMjIwV5rmOQzUfL4k/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9aSjlQQVdWUC5qcGc" },
+  { title: "Introdução ao Ecossistema Angular", img: "https://assets.dio.me/kRoZXnvgaGbYOLYgaAsbo5hqkLyPupnwC03UBRKCP7k/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci83QTFTWVVFUS5qcGc" },
+  { title: "Fundamentos de Front-end Componentizados", img: "https://assets.dio.me/qsDTq4B-fCQh4m4yMAdKo_5ytC-5lmeZm3ubxOFOOss/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8xUEM2SFhNMS5qcGc" },
+  { title: "Materiais Complementares: Fundamentos de Front-end Componentizados", img: "https://assets.dio.me/nmVy78Vmc1C2N9Gm8aqokayhZ9EVVJQSDOCVP6qfLV4/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9SUVdIWkZHUi5qcGc" },
+  { title: "TypeScript para Angular", img: "https://assets.dio.me/QYKSjVnnp8N-3Ryny6ahCVy-ZcqaiiH-nhQkFHPUi3Q/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci85MVZVSE84Wi5qcGc" },
+  { title: "Trabalhando com Web Components no Front-end", img: "https://assets.dio.me/E6afiinQylN_vrVLNR6SazwTQWq8x1I5bWz_30w5YRg/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9QUEU1V01TTi5qcGc" },
+  { title: "Boas-vindas a Formação Rumo à Certificação AWS Cloud Practitioner", img: "https://assets.dio.me/lEhlvOyO1ZPnZx_exl5_XIVoARtYo1UapiozP6jEZ7U/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8yMEZCMzgzRC5qcGc" },
+  { title: "Bootcamps DIO: Educação Gratuita e Empregabilidade Juntas!", img: "https://assets.dio.me/UKB42IWJutwzhPSQvRo4k70Bd8x_SnjtUHweEmJ_fSU/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9FM0Q3REUwNy5qcGc" },
+  { title: "AWS Official Content - Introdução à Amazon Web Services (AWS)", img: "https://assets.dio.me/Lr3DBwVN-xPJvpRc03qZ4dsuoc0jemBsGSnOAjF7mAs/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9FREEwQTEzNC5qcGc" },
+  { title: "Entendendo a Base do Aplicativo Reactive", img: "https://assets.dio.me/CgdbL5YkHfvBMkd1YQRquFYAf_lWflea-gJHqX1l5Sk/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9BQkUzNjQ3Ny5qcGc" },
+  { title: "Lógica de Programação em OutSystems", img: "https://assets.dio.me/IVJ-B_o2RV-vACSh4_EIq2daKxDzPCodsV3-9liZkZY/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9DRDU0NkFDNy5qcGc" },
+  { title: "Conhecendo os Serviços da AWS", img: "https://assets.dio.me/hbSj-4kDZmERP87N0wI1UUzmR2o1fk4IheVVIcv-m0Y/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9DNTdDQzdDNC5qcGc" },
+  { title: "Descubra a Nuvem", img: "https://assets.dio.me/TePvpYYvIhDascep7hP0_CV7pPevSpuc_v4f3BzzrtQ/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8xNDFDMThCMC5qcGc" },
+  { title: "Primeiros Passos com OutSystems", img: "https://assets.dio.me/_1u7Iv1unPjBfrS4bCG0H7kGkp3uuOWcP6N4_dkcUm0/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9DNUVDQTAzQi5qcGc" },
+  { title: "Mentoria Bônus: Carreira OutSystems - Bate-papo com Davidson Vilela", img: "https://assets.dio.me/11mXIV2nMTar-XKuwIcF_CGGvp9cUlP-u5qA3Hn3g80/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci82NDNBMjVFOS5qcGc" },
+  { title: "Introdução ao Ecossistema OutSystems", img: "https://assets.dio.me/9dks4ji8eOF5MUrlptvKXBQBqvtAVDXQe8s3yu_R3Qs/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci85OTAwMjExQi5qcGc" },
+  { title: "Introdução ao Agile", img: "https://assets.dio.me/9SvfXiEAlk-yznnn8CvvMI6zpwK_NmTRhstlwvC-uc8/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci82QkVBODI4MS5qcGc" },
+  { title: "Introdução ao Desenvolvimento Low-Code", img: "https://assets.dio.me/TfSjcsx8cueLekFR7upZV-AFRzsgF-dmVUACS3GQwPk/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci81NThBODk2RC5qcGc" },
+  { title: "Onboarding: Conhecendo a Formação OutSystems", img: "https://assets.dio.me/eStqpXvsLjbzfBX1HPqW4heQysBxowdknfPeEE-n6K8/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci81RDE5NDE5My5qcGc" },
+  { title: "Gerenciando Usuários no Linux", img: "https://assets.dio.me/j18zLox1iljz7kOTqaymKgHXxW5Mko6yxNBya-LrGcQ/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9DQzhEMjczRi5qcGc" },
+  { title: "Manipulando Arquivos no Linux", img: "https://assets.dio.me/c6gLsMiPJP5YxwyiGNFpPzUp2pHJaD0HfSujAG7fUWo/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8yNjA2NEI4MC5qcGc" },
+  { title: "Acesso Remoto a Máquinas Linux", img: "https://assets.dio.me/nylYXFw7bblXYTEziYsHo29UbS_k_ZyfMJ1TSTozWew/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9FRkY4MjUxMy5qcGc" },
+  { title: "Instalando o Linux", img: "https://assets.dio.me/jOM9QFMRABUnl-d4RMMMXq4FxTVaOJQSq7jHP-FnCss/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9FRDBDODgyRi5qcGc" },
+  { title: "Prepare-se Para a Jornada", img: "https://assets.dio.me/V0PcHYGmU6hfiJxOrnuGLBbVnEljz-vRLNVJ-mp5UR4/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8wNjAyNzA4MS5qcGc" },
+  { title: "Bootcamp Cloud AWS | Aula Inaugural", img: "https://assets.dio.me/rngUsaQ0G34_SKFnEUO71FmTMykAISWV_QXYAK1S2lA/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9BQzk0OTQzQi5qcGc" },
+  { title: "Introdução ao Sistema Operacional Linux", img: "https://assets.dio.me/hWKQSKce4x3MTqM3DM7cRrlCvIbJf18pDXdd_Kt98rQ/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci83QkE0N0U2QS5qcGc" },
+  { title: "Introdução ao Desenvolvimento Moderno de Software", img: "https://assets.dio.me/-AaLYhQAx7sgQQnlRbexhjJVhphnvNUMNMyvwE34HvQ/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci85QkM1QjIxRS5qcGc" },
+  { title: "Seja Protagonista Neste Bootcamp", img: "https://assets.dio.me/Es6AT1Z7PPbxg0XBUKj9qIyZAfj0RXzchzFOB-8OPGI/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9GNzA3MDhFOC5qcGc" },
+  { title: "Boas-vindas ao Bootcamp Cloud AWS", img: "https://assets.dio.me/LYthgUt90Tp_TEMGLkiCRJofvqulz1kmjOTheYosVEI/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci83QkZDRDExMi5qcGc" },
+  { title: "Conheça as Oportunidades da DIO", img: "https://assets.dio.me/RS90euY7mu9J9BriuDBYAdeZcrPPWJ_Yyo3roN1KkxY/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9DQkE3QUZFNi5qcGc" },
+  { title: "Conceitos de responsividade e experiência do usuário", img: "https://assets.dio.me/D-Ay10JkUMWaGrwmEXYMDSdHa0O3Z6CTIPp1entuCrk/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci83NDVGQkEwRi5qcGc" },
+  { title: "Boas-vindas ao Bootcamp Eduzz Fullstack Developer #3", img: "https://assets.dio.me/hH2pr__KDWonk4_iI_5AqgZUtoZDOcB9ZDc2Z01SfVc/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9CMEQzNjY1RC5qcGc" },
+  { title: "Introdução ao TypeScript: Explorando Classes, Tipos e Interfaces", img: "https://assets.dio.me/Q5hOj3QbVnuMWkV7f5QfuAS2JIGrE7hmoYus7k_y75A/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9CNEI0NUQyRi5qcGc" },
+  { title: "Boas-vindas ao Bootcamp Eduzz Fullstack Developer #2", img: "https://assets.dio.me/lWVGVU43Xm5dwbcVovXlWxLP1Wt3fH6Fo1TahHTVe20/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8yMkVBOTQzRC5qcGc" },
+  { title: "Fundamentos de JavaScript Assíncrono", img: "https://assets.dio.me/CUTz72VEm61aBkJoy_UrClzSJbjq03B5ski0XEu99cU/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9FNENGMjZGMS5qcGc" },
+  { title: "Map, Filter e Reduce", img: "https://assets.dio.me/iVAQ9t7I6BJFzWCPkfzIbQQETcNuXFl09cw6-281rUc/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9BRjVBRDY2My5qcGc" },
+  { title: "Orientação a Objetos com JavaScript", img: "https://assets.dio.me/OjjL_sJeSy4KkTr34a_9C5kCMlP9tlIuE7zbGqxeLmA/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8zMkU2MzM0Ri5qcGc" },
+  { title: "Debugging e Error Handling com JavaScript", img: "https://assets.dio.me/Cpz8ANbnqgIayDGBH4rKzxmTirdB5lWiL6CXlOi7cfg/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9CMEE2MjYxRS5qcGc" },
+  { title: "Trabalhando com Módulos em JavaScript", img: "https://assets.dio.me/-WUfR16JCt0IXc1OwNhdcwBWPlpsg85DJABEkcWEcXo/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8yNDRENkZDNy5qcGc" },
+  { title: "Trabalhando com Módulos em JavaScript", img: "https://assets.dio.me/qHbchU_abl6R332lZa5hANl6ZpxD5Jx6LTgPeESpQSA/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9FMTY3QTZGOS5qcGc" },
+  { title: "Recriando o Famoso Jogo do Dinossauro sem Internet", img: "https://assets.dio.me/eYsfc4sBiEz6uk5Yod6NzKBDJSWq8aklvH_LeI6nfLY/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci84NDY4MDA0Ni5qcGc" },
+  { title: "Manipulando a D.O.M. com JavaScript", img: "https://assets.dio.me/Fcgn72URJKLmTFpIbfH6HGxjZPl3Sks_lmzwQKVyim0/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8xMzQ2REFFRS5qcGc" },
+  { title: "Mapas e Conjuntos com JavaScript", img: "https://assets.dio.me/NkkROsFD4z10MJNMECtffV-2JUE8NfJ4I9Xpyxa5EDM/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci82MjAxNzBDMC5qcGc" },
+  { title: "Dominando Funções em JavaScript", img: "https://assets.dio.me/EsuqdPYilDzCXYSFzDyKv8VPxEdaMA_bxpG6kD6I6v8/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8zRUMxMDQ3NS5qcGc" },
+  { title: "Variáveis e Tipos com JavaScript", img: "https://assets.dio.me/FkXFM0wLQlEfc6x5KIxQ3JeoBabmCtlYhCzVLVOja0Q/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci84NzgwRjVCOS5qcGc" },
+  { title: "Sintaxe e Operadores JavaScript", img: "https://assets.dio.me/_PsYbZ_jfiVLtrSQCz6BUFHfkULD874HTAJYkxnm9T0/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8yRTU3RTE4NS5qcGc" },
+  { title: "Posicionando elementos com Flexbox em CSS", img: "https://assets.dio.me/GNFYR-Gz-1VEEKei1LgskW9PtHla2lQujGpBpf1oKx8/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8xOEQ3MzM0Ny5qcGc" },
+  { title: "Instalação e Configuração do Visual Studio Code", img: "https://assets.dio.me/m2Ecm7wC9F7GGX64UGOAkFMPCEuMjie9z3LjxCe6G00/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9DMzE0QkUxMy5qcGc" },
+  { title: "Desenvolvimento avançado com JavaScript ES6", img: "https://assets.dio.me/rmG0jocJMOdRKu6o9O7p9hx23g77j0zby5t1Cb4ecvw/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8yM0ExMzJDRC5qcGc" },
+  { title: "Boas-vindas ao Bootcamp Impulso React Web Developer", img: "https://assets.dio.me/UgJxz2WKLXXpkOIr4pUlEA3XZn8eo42AXojBHrNnDU4/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8yNUI2NTNDMC5qcGc" },
+  { title: "Resolvendo Desafios de Código em Javascript", img: "https://assets.dio.me/hvXcG-Qj6hYcJS3XVrBgh_PKrNATM8kI19qD2l5Wc_M/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8wQjg0QTc3OS5qcGc" },
+  { title: "Criando seu Jogo de Memória Estilo Genius", img: "https://assets.dio.me/tVv2K_n3dgo6vsCYkmaSXdTHLnLJy1sMngrI9NK0COw/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci80RkI3MDExQi5qcGc" },
+  { title: "Desmistificando map, filter e reduce", img: "https://assets.dio.me/ONeqqiejrAdnbK30kHYMsJmAObkt5F6I9iuGXwyKPVs/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci83RUMwRkI5Ny5qcGc" },
+  { title: "Construindo o seu Primeiro Jogo de Naves", img: "https://assets.dio.me/x2_MrrBhN93QycO-TygbiKsnWbMcWHaTs0DUt2CgnMM/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9CMjRGNDkzMi5qcGc" },
+  { title: "Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso", img: "https://assets.dio.me/ajFf4KG93ZjG0vxGdONP2OPnrlboMeZeMPK116f0mD8/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci82RDZBRUY4OS5qcGc" },
+  { title: "Recriando a Interface do Netflix", img: "https://assets.dio.me/7vtosbcLl95-ZQAvTK0vBuCV2MVaJLuwYznZkLwK6f4/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8wODY4N0FCRC5qcGc" },
+  { title: "Boas-vindas ao Bootcamp Eduzz Fullstack Developer", img: "https://assets.dio.me/YgGmL0eNU4nKcaX4V-bb5NF-1BzBR-HPJn13T1E0lJU/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci81MDQ5QjMyRS5qcGc" },
+  { title: "Projetos ágeis com SCRUM", img: "https://assets.dio.me/y5h2Hqjx4z8T1rR01I1dkuvNNrwvz9tOKDZlTFDK4yg/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci83Njg4QjZFMS5qcGc" },
+  { title: "Conceitos de responsividade e experiência do usuário", img: "https://assets.dio.me/jX1Q8zZ6tSDnccrEf87ah2kFmx0R768LMvG6X9NFjjs/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8xQTQ3MUZFOS5qcGc" },
+  { title: "Recriando a Página Inicial do Instagram", img: "https://assets.dio.me/Q_NM0PgVMrY_rQ1NYVWt6tA_pDXcEkfk8BzrWWr7UCg/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci80OTRCMEQ5NS5qcGc" },
+  { title: "Configuração da Suíte de Testes e Aplicando Testes Integrados em .NET", img: "https://assets.dio.me/eJCkgprMsR5h9FifmX4PzxpJrNRKDnX3OmZLqTmqwO4/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8wMjcyNjJGMy5qcGc" },
+  { title: "Desenvolvendo sua aplicação com C# usando DDD", img: "https://assets.dio.me/aPM7HHWUa2brjnpNUN454DK39tiFTLLJN-HpyQ-jqhM/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9CNjUzNUVFNi5qcGc" },
+  { title: "Introdução a Qualidade de Software", img: "https://assets.dio.me/aIndprHzxr1YHVe30hU5ogUgqsD6TxEQsJxSwuCPFtg/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci83OThGMTMxNS5qcGc" },
+  { title: "Introdução a Design Patterns com .NET", img: "https://assets.dio.me/rI61fbT-OH1PlBHZJuunkHPxrGRFMfDLY7-AsdNo12c/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9DQjgwOTdFQy5qcGc" },
+  { title: "Desenvolvimento de aplicações para internet com ReactJS", img: "https://assets.dio.me/nz-c6j-Q9Sa3idwGYHx1mO9YS8zeTRMotZaZOWXih6k/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci82QUYzNkFDNC5qcGc" },
+  { title: "Práticas avançadas em projetos com ReactJS", img: "https://assets.dio.me/1x-CI-RFQXZZElax6_esHcWANuRycV7fnYNTgKfaOUY/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci82NzEyQkY4RS5qcGc" },
+  { title: "Trabalhando com Componentes em React", img: "https://assets.dio.me/q28JaYXhn3xlWQi8ZNE7el1Vq-5jNuCRdXlhamAtlOw/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9CMzUxNjMwQS5qcGc" },
+  { title: "Introdução ao ReactJS", img: "https://assets.dio.me/LhfUK-M8Suwi_fHfr6Iu_d9vP_r4ggIMHH1nENwR358/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9DOTkxNURFNS5qcGc" },
+  { title: "Introdução a microsserviços com .NET", img: "https://assets.dio.me/DVk48azMFIUDkttId8uxwOuC88KxRQO1Bd4zyrbykMo/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci85NTRFOEQzMC5qcGc" },
+  { title: "Construindo um Projeto de uma API.NET Integrada ao MongoDB", img: "https://assets.dio.me/4_ZwHRanvHu0evFRt9-YCnFPHgPhRfjP7xXx_DXBdME/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci82QjYwODRCMS5qcGc" },
+  { title: "Criando um Catálogo de Jogos Usando Boas Práticas de Arquitetura com .NET", img: "https://assets.dio.me/tV748MIBG-rjcTxleOF_akpBSieXdkaE5e-KZJ9FPm4/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9DMUE0OENGRC5qcGc" },
+  { title: "Instalando o Visual Studio e SDK", img: "https://assets.dio.me/zHjT3iJbb7rTwa_2TfztZH_c9okzS1tG-NFC0bFdJZ0/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci80QjlFNUE1Qy5qcGc" },
+  { title: "Boas-vindas ao Bootcamp Carrefour Android Developer", img: "https://assets.dio.me/zKmOSsy15wC_DsbkiBiM6KY1Tjt9IcSHRBYnKnEGn-s/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci80OTU3QTdCOS5qcGc" },
+  { title: "Configuração da arquitetura back-end com .NET Core", img: "https://assets.dio.me/RMq_BZKce9jNbTIswrQOonWRImjwqAo1GeksjCqk2Jw/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9BRDY5NkNCNS5qcGc" },
+  { title: "Arquitetura de Sistemas Avançado", img: "https://assets.dio.me/mGreY4Gf9DZGBtMyOVmembvh1hvdXVJdQdd4hXsiV_0/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8xRjRGMDZFRS5qcGc" },
+  { title: "Fundamentos de Arquitetura de Sistemas", img: "https://assets.dio.me/h6rFMm9elJJaKz4p0Rn_RrsZqcpanF8cUfjMKR_nWW0/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8xOTEzQzA4OC5qcGc" },
+  { title: "Criando um APP Simples de Cadastro de Séries em .NET", img: "https://assets.dio.me/-FBwpGkcFnYmpBv2PZXFTK7n8huoBzPlkyLZdfEnCAU/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8yMTVCQkJCMC5qcGc" },
+  { title: "Desenvolvimento de aplicações com .NET", img: "https://assets.dio.me/m_u9dYcJaobH9esSjvCW2xh53u1Eookuxq4g7Mj4uKA/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci82RkEwRUE5RS5qcGc" },
+  { title: "Orientação a objetos em .NET", img: "https://assets.dio.me/-viC-n_4HNjLZXO3d5yQiSKv8_exZiMm6fDm8s9g2Uk/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci81MzIxNDYzOC5qcGc" },
+  { title: "Primeiros passos com .NET", img: "https://assets.dio.me/_v5jD5zlDdOCVzCnQC104fASEYYF1M3RrIsLp3S52LE/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9GRkQ5OEQ1MS5qcGc" },
+  { title: "SQL SERVER - Criando suas primeiras consultas", img: "https://assets.dio.me/RJbRMhTJXO_SkZTvn-POm6ZyJl7fWCUM9PIF2GHjhvI/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci85OTlGQ0EyOS5qcGc" },
+  { title: "Conceitos e Melhores Práticas com Bancos de Dados PostgreSQL", img: "https://assets.dio.me/iGlsxEI7y23F3WLW7xo-0qF5S7mv_2n-hFPbsgGTRWs/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9BN0FEMkNFMi5qcGc" },
+  { title: "Boas-vindas ao Bootcamp Code Anywhere", img: "https://assets.dio.me/UEHAc035ImLeLbs-jlmFtBENw_hivTGTgb4X9-KEo4M/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9CMDlEMTA2My5qcGc" },
+  { title: "Programação para internet com JavaScript", img: "https://assets.dio.me/hUH9UaN0yhupDcrOpGMkamExrFPq5zXOlaodCzxbOCw/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8yQ0Q2Q0RFQy5qcGc" },
+  { title: "JavaScript ES6 essencial", img: "https://assets.dio.me/-b6HG1i_gbjijCZQu5Rgsb3if7BgLHDtIRBp7W0Kceg/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci82RDRFOUQ4OS5qcGc" },
+  { title: "Introdução a Criação de Websites com HTML5 e CSS3", img: "https://assets.dio.me/tCHhLGyltnQTf9p0mnIcPvQ11IV8ssEidU-NrGOs3Ho/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8yNEM0MzQ4Ny5qcGc" },
+  { title: "Boas-vindas ao Bootcamp everis New Talents .NET", img: "https://assets.dio.me/r-8xSASwUuo_Wp2XjEGKbC4FHGtrzPY7FHvBeVGTWEA/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci85NDYwNzgyNi5qcGc" },
+  { title: "Aprenda o que são Estrutura de Dados e Algoritmos", img: "https://assets.dio.me/iJvTU9lL38Rut2YhKFS3ppdfOEwnX8vcMpTcvwxquME/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci85QTg5NEM1RS5qcGc" },
+  { title: "Lógica de Programação Essencial", img: "https://assets.dio.me/drTF_WoBYJAeFS9yRfVCyhX7G9kEjeomCS07MKNtd_8/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8zOUI5RDFGRC5qcGc" },
+  { title: "Boas-vindas ao Bootcamp LocalizaLabs React Developer", img: "https://assets.dio.me/vMGopjrok3OpYizHvHBMZIEaZFsfrmNGjCmWXSPmOoY/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci85NUE1NzQzRi5qcGc" },
+  { title: "Introdução ao Git e ao GitHub", img: "https://assets.dio.me/VGEIR6JF4jHnf51onJzGBWuvIC-ddOwo4sKsbQzRLJ0/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9DMUE5RUY5QS5qcGc" },
+  { title: "Lógica de programação Essencial", img: "https://assets.dio.me/4A-HCRivreaDbNP-o5jyP81Ux1liNOtRzPund6UtR-o/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9FQjMzOEFERi5qcGc" },
+  { title: "Bem-vindo à DIO", img: "https://assets.dio.me/Fs9XnX26oo99PlOMmOuXp5ZrmqnVhpQ3SFvS-RJEghY/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci9GREE3MUYzNC5qcGc" },
+  { title: "Boas-vindas ao Bootcamp Take Blip Fullstack Developer", img: "https://assets.dio.me/NKT-W-N0MpZWVuIWyHtMRZHl4LXG5rspcIR1s5P6Nv8/f:webp/h:320/q:70/w:450/L2NlcnRpZmljYXRlcy9jb3Zlci8xMDRCRTIzNy5qcGc" }
 ];
 
 // Pagination State
 let currentPage = 1;
+let searchQuery = '';
 const itemsPerPage = 30;
 const maxPageLinks = 5;
 
 // DOM Elements
 const certGrid = document.getElementById('cert-grid');
 const certPagination = document.getElementById('cert-pagination');
+const certSearch = document.getElementById('cert-search') as HTMLInputElement;
+const certStats = document.getElementById('cert-stats');
 const certModal = document.getElementById('cert-modal');
 const certModalImg = document.getElementById('cert-modal-img') as HTMLImageElement;
 const certModalTitle = document.getElementById('cert-modal-title');
@@ -136,9 +271,19 @@ function renderCertificates() {
   if (!certGrid) return;
   
   certGrid.innerHTML = '';
+  
+  const filteredCerts = certificates.filter(cert => 
+    cert.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const pageItems = certificates.slice(startIndex, endIndex);
+  const pageItems = filteredCerts.slice(startIndex, endIndex);
+
+  if (pageItems.length === 0) {
+    certGrid.innerHTML = '<div class="col-span-full text-center py-12 text-white/20 uppercase tracking-widest font-bold">Nenhum certificado encontrado</div>';
+    return;
+  }
 
   pageItems.forEach(cert => {
     const card = document.createElement('span');
@@ -159,7 +304,12 @@ function renderPagination() {
   if (!certPagination) return;
   
   certPagination.innerHTML = '';
-  const totalPages = Math.ceil(certificates.length / itemsPerPage);
+  
+  const filteredCerts = certificates.filter(cert => 
+    cert.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+  
+  const totalPages = Math.ceil(filteredCerts.length / itemsPerPage);
   
   if (totalPages <= 1) return;
 
@@ -215,13 +365,29 @@ function renderPagination() {
   createIcons(iconsConfig);
 }
 
-function updateUI() {
+function renderStats() {
+  if (!certStats) return;
+  
+  const filteredCerts = certificates.filter(cert => 
+    cert.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+  
+  certStats.innerHTML = `
+    TOTAL: ${certificates.length} <span class="mx-2 text-white/10">•</span> FILTRADOS: ${filteredCerts.length}
+  `;
+}
+
+function updateUI(scroll = true) {
   renderCertificates();
   renderPagination();
-  // Scroll to section start on page change
-  const section = document.getElementById('certificacoes');
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  renderStats();
+  
+  if (scroll) {
+    // Scroll to section start on page change
+    const section = document.getElementById('certificacoes');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 }
 
@@ -261,7 +427,14 @@ certModalClose?.addEventListener('click', closeModal);
 certModalOverlay?.addEventListener('click', closeModal);
 
 // Initial Render
-updateUI();
+updateUI(false);
+
+// Search Event
+certSearch?.addEventListener('input', (e) => {
+  searchQuery = (e.target as HTMLInputElement).value;
+  currentPage = 1;
+  updateUI(false);
+});
 
 // Mobile Menu Elements
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');

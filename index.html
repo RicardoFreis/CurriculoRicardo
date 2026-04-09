@@ -317,23 +317,37 @@
 
           <!-- Certificações -->
           <section id="certificacoes" class="scroll-mt-24">
-            <div class="flex flex-col gap-8">
-              <div class="flex items-center gap-4">
-                <div class="h-px flex-1 bg-white/10"></div>
-                <h2 class="text-xl font-black uppercase tracking-widest text-cyan-400">Cursos e Certificações (DIO.me)</h2>
-                <div class="h-px flex-1 bg-white/10"></div>
-              </div>
-              
-              <!-- Certificates Grid -->
-              <div id="cert-grid" class="grid grid-cols-1 md:grid-cols-3 gap-y-2 gap-x-6 min-h-[200px]">
-                <!-- Will be populated by JS -->
-              </div>
+              <div class="flex flex-col gap-8">
+                <div class="flex items-center gap-4">
+                  <div class="h-px flex-1 bg-white/10"></div>
+                  <h2 class="text-xl font-black uppercase tracking-widest text-cyan-400">Cursos e Certificações (DIO.me)</h2>
+                  <div class="h-px flex-1 bg-white/10"></div>
+                </div>
 
-              <!-- Pagination -->
-              <div id="cert-pagination" class="flex items-center justify-center gap-2 mt-8">
-                <!-- Will be populated by JS -->
+                <!-- Search Bar -->
+                <div class="relative max-w-md mx-auto w-full">
+                  <input type="text" id="cert-search" placeholder="Buscar certificados..." 
+                    class="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 pl-12 text-white placeholder:text-white/20 focus:outline-none focus:border-cyan-500/50 transition-all">
+                  <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/20"></i>
+                </div>
+                
+                <div class="flex flex-col gap-2">
+                  <!-- Certificates Grid -->
+                  <div id="cert-grid" class="grid grid-cols-1 md:grid-cols-3 gap-y-2 gap-x-6 min-h-[200px]">
+                    <!-- Will be populated by JS -->
+                  </div>
+    
+                  <!-- Pagination -->
+                  <div id="cert-pagination" class="flex items-center justify-center gap-2 mt-4">
+                    <!-- Will be populated by JS -->
+                  </div>
+
+                  <!-- Stats -->
+                  <div id="cert-stats" class="text-center text-[9px] md:text-[10px] text-cyan-400/40 font-bold uppercase tracking-[0.2em] mt-1">
+                    <!-- Will be populated by JS -->
+                  </div>
+                </div>
               </div>
-            </div>
           </section>
 
           <!-- Certificate Modal -->
