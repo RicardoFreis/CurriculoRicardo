@@ -551,19 +551,7 @@ const generatePDF = () => {
   doc.setFontSize(14);
   doc.setTextColor(100);
   doc.text('Desenvolvedor de Sistemas', margin, y);
-  y += 10;
-
-  // Contact Info
-  doc.setFontSize(11);
-  doc.setTextColor(0);
-  doc.text('WhatsApp: (011) 98363-2445', margin, y);
-  y += 5;
-  doc.text('Email: ricreis71@gmail.com', margin, y);
-  y += 5;
-  doc.text('LinkedIn: linkedin.com/in/ricardo-furtado-reis-04a47314a/', margin, y);
-  y += 5;
-  doc.text('GitHub: github.com/RicardoFreis', margin, y);
-  y += 10;
+  y += 12;
 
   // Sobre
   doc.setFontSize(16);
@@ -576,6 +564,22 @@ const generatePDF = () => {
   const splitSobre = doc.splitTextToSize(sobreText, pageWidth - (margin * 2));
   doc.text(splitSobre, margin, y);
   y += (splitSobre.length * 5) + 10;
+
+  // Contato
+  doc.setFontSize(16);
+  doc.setTextColor(0, 180, 216);
+  doc.text('CONTATO', margin, y);
+  y += 6;
+  doc.setFontSize(11);
+  doc.setTextColor(0);
+  doc.text('WhatsApp: (011) 98363-2445', margin, y);
+  y += 5;
+  doc.text('Email: ricreis71@gmail.com', margin, y);
+  y += 5;
+  doc.text('LinkedIn: linkedin.com/in/ricardo-furtado-reis-04a47314a/', margin, y);
+  y += 5;
+  doc.text('GitHub: github.com/RicardoFreis', margin, y);
+  y += 10;
 
   // Educação
   checkNewPage(30);
@@ -815,29 +819,6 @@ const generateDOCX = () => {
         }),
         new Paragraph({ text: "" }), // Spacer
 
-        // Contact Info
-        new Paragraph({
-          children: [
-            new TextRun({ text: "WhatsApp: (011) 98363-2445", size: 22 }),
-          ],
-        }),
-        new Paragraph({
-          children: [
-            new TextRun({ text: "Email: ricreis71@gmail.com", size: 22 }),
-          ],
-        }),
-        new Paragraph({
-          children: [
-            new TextRun({ text: "LinkedIn: linkedin.com/in/ricardo-furtado-reis-04a47314a/", size: 22 }),
-          ],
-        }),
-        new Paragraph({
-          children: [
-            new TextRun({ text: "GitHub: github.com/RicardoFreis", size: 22 }),
-          ],
-        }),
-        new Paragraph({ text: "" }),
-
         // Sobre
         new Paragraph({
           heading: HeadingLevel.HEADING_1,
@@ -856,6 +837,40 @@ const generateDOCX = () => {
               text: "Desenvolvedor de sistemas com mais de 8 anos de experiência. Focado em entregar código limpo e soluções eficientes.",
               size: 22,
             }),
+          ],
+        }),
+        new Paragraph({ text: "" }),
+
+        // Contato
+        new Paragraph({
+          heading: HeadingLevel.HEADING_1,
+          children: [
+            new TextRun({
+              text: "CONTATO",
+              bold: true,
+              size: 32,
+              color: "00B4D8",
+            }),
+          ],
+        }),
+        new Paragraph({
+          children: [
+            new TextRun({ text: "WhatsApp: (011) 98363-2445", size: 22 }),
+          ],
+        }),
+        new Paragraph({
+          children: [
+            new TextRun({ text: "Email: ricreis71@gmail.com", size: 22 }),
+          ],
+        }),
+        new Paragraph({
+          children: [
+            new TextRun({ text: "LinkedIn: linkedin.com/in/ricardo-furtado-reis-04a47314a/", size: 22 }),
+          ],
+        }),
+        new Paragraph({
+          children: [
+            new TextRun({ text: "GitHub: github.com/RicardoFreis", size: 22 }),
           ],
         }),
         new Paragraph({ text: "" }),
