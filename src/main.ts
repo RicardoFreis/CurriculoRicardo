@@ -479,13 +479,18 @@ mobileLinks.forEach(link => {
     if (targetId && targetId !== '#') {
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
-        // Delay scroll slightly to allow menu closing animation to start
+        // Delay scroll slightly to allow menu closing animation to start and finish
         setTimeout(() => {
-          targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+          const nav = document.querySelector('nav');
+          const navHeight = nav ? nav.offsetHeight : 0;
+          const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = elementPosition - navHeight;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
           });
-        }, 300);
+        }, 350);
       }
     } else {
       // If targetId is '#' (Inicio), scroll to top
@@ -494,7 +499,7 @@ mobileLinks.forEach(link => {
           top: 0,
           behavior: 'smooth'
         });
-      }, 300);
+      }, 350);
     }
   });
 });
@@ -507,9 +512,14 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     if (targetId && targetId !== '#') {
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+        const nav = document.querySelector('nav');
+        const navHeight = nav ? nav.offsetHeight : 0;
+        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - navHeight;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
         });
       }
     } else {
