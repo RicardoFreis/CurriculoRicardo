@@ -1,6 +1,8 @@
-import { createIcons, Menu, X, Smartphone, Phone, Mail, Linkedin, Github, Home, Award, ChevronRight, ChevronLeft, Copyright, Search, Printer } from 'lucide';
+import { createIcons, Menu, X, Smartphone, Phone, Mail, Linkedin, Github, Home, Award, ChevronRight, ChevronLeft, Copyright, Search, Printer, FileText } from 'lucide';
 import './index.css';
 import { jsPDF } from 'jspdf';
+import { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, Table, TableRow, TableCell, WidthType, BorderStyle } from 'docx';
+import { saveAs } from 'file-saver';
 
 // Icons configuration
 const iconsConfig = {
@@ -18,7 +20,8 @@ const iconsConfig = {
     ChevronLeft,
     Copyright,
     Search,
-    Printer
+    Printer,
+    FileText
   }
 };
 
@@ -521,7 +524,9 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
 
 // PDF Generation Logic
 const printBtn = document.getElementById('print-btn');
-printBtn?.addEventListener('click', () => {
+const mobilePrintBtn = document.getElementById('mobile-print-btn');
+
+const generatePDF = () => {
   const doc = new jsPDF();
   const margin = 15;
   let y = margin;
@@ -724,4 +729,293 @@ printBtn?.addEventListener('click', () => {
   doc.text('Para acessar todos os cursos acesse a versão digital: www.ricardo.com.br', pageWidth / 2, y, { align: 'center' });
 
   doc.save('Curriculo_Ricardo_Furtado_Reis.pdf');
-});
+};
+
+printBtn?.addEventListener('click', generatePDF);
+mobilePrintBtn?.addEventListener('click', generatePDF);
+
+// DOCX Generation Logic
+const docxBtn = document.getElementById('docx-btn');
+const mobileDocxBtn = document.getElementById('mobile-docx-btn');
+
+const generateDOCX = () => {
+  const experiences = [
+    { 
+      company: 'Atos Brasil', 
+      role: 'Analista Programador', 
+      period: '01/12/2021 - 10/07/2024',
+      bullets: [
+        'Projetos financeiros internos: Criação, manutenção e relatórios Excel; Tradução do sistema para 3 idiomas (PT, ES, EN); Cálculos de custos, despesas e receitas.',
+        'Locação Volkswagen: Projeto na campanha do carro Polo de 2023; Processamento de arquivos XML para base SQL e geração de notas fiscais; Relatórios Excel.',
+        'Locação CPFL Energia: Geração de scripts para criação de registros e alterações de dados; Manutenção de sistemas e relatórios.'
+      ]
+    },
+    { 
+      company: 'Hayashi Informática', 
+      role: 'Analista Programador', 
+      period: '06/03/2017 - 20/10/2017',
+      bullets: [
+        'Desenvolvimento completo de um sistema de automação comercial.',
+        'Implementação de API para cálculo e emissão de cupom fiscal eletrônico.',
+        'Implementação de SAT-CF-e (Sistema Autenticador e Transmissor de Cupons Fiscais Eletrônicos).'
+      ]
+    },
+    { 
+      company: 'Cedesi Informática', 
+      role: 'Programador', 
+      period: '02/05/2000 - 17/02/2003',
+      bullets: [
+        'Criação, manutenção e relatórios de diversos sistemas legados e novos.',
+        'Sistemas atendidos: Contas a pagar/receber, Faturamento, Automação de Farmácia, Folha de Pagamento, Contas Correntes, Controle de Estoque e Contabilidade.'
+      ]
+    },
+    { 
+      company: 'Cedesi Informática', 
+      role: 'Programador', 
+      period: '01/04/1991 - 15/01/1996',
+      bullets: [
+        'Criação, manutenção e relatórios de diversos sistemas legados e novos.',
+        'Sistemas atendidos: Contas a pagar/receber, Faturamento, Automação de Farmácia, Folha de Pagamento, Contas Correntes, Controle de Estoque e Contabilidade.'
+      ]
+    }
+  ];
+
+  const doc = new Document({
+    styles: {
+      default: {
+        document: {
+          run: {
+            font: "Arial",
+          },
+        },
+      },
+    },
+    sections: [{
+      properties: {},
+      children: [
+        // Header
+        new Paragraph({
+          children: [
+            new TextRun({
+              text: "RICARDO FURTADO REIS",
+              bold: true,
+              size: 52, // 26pt
+              color: "00B4D8",
+            }),
+          ],
+        }),
+        new Paragraph({
+          children: [
+            new TextRun({
+              text: "Desenvolvedor de Sistemas",
+              size: 28, // 14pt
+              color: "646464",
+            }),
+          ],
+        }),
+        new Paragraph({ text: "" }), // Spacer
+
+        // Contact Info
+        new Paragraph({
+          children: [
+            new TextRun({ text: "WhatsApp: (011) 98363-2445", size: 22 }),
+          ],
+        }),
+        new Paragraph({
+          children: [
+            new TextRun({ text: "Email: ricreis71@gmail.com", size: 22 }),
+          ],
+        }),
+        new Paragraph({
+          children: [
+            new TextRun({ text: "LinkedIn: linkedin.com/in/ricardo-furtado-reis-04a47314a/", size: 22 }),
+          ],
+        }),
+        new Paragraph({
+          children: [
+            new TextRun({ text: "GitHub: github.com/RicardoFreis", size: 22 }),
+          ],
+        }),
+        new Paragraph({ text: "" }),
+
+        // Sobre
+        new Paragraph({
+          heading: HeadingLevel.HEADING_1,
+          children: [
+            new TextRun({
+              text: "SOBRE",
+              bold: true,
+              size: 32,
+              color: "00B4D8",
+            }),
+          ],
+        }),
+        new Paragraph({
+          children: [
+            new TextRun({
+              text: "Desenvolvedor de sistemas com mais de 8 anos de experiência. Focado em entregar código limpo e soluções eficientes.",
+              size: 22,
+            }),
+          ],
+        }),
+        new Paragraph({ text: "" }),
+
+        // Educação
+        new Paragraph({
+          heading: HeadingLevel.HEADING_1,
+          children: [
+            new TextRun({
+              text: "EDUCAÇÃO",
+              bold: true,
+              size: 32,
+              color: "00B4D8",
+            }),
+          ],
+        }),
+        new Paragraph({
+          children: [
+            new TextRun({ text: "Engenharia da Computação - Universidade São Judas Tadeu (Não concluído, encerrado no 2o ano)", size: 22 }),
+          ],
+        }),
+        new Paragraph({
+          children: [
+            new TextRun({ text: "Processamento de Dados - Colégio Brasil (Concluído)", size: 22 }),
+          ],
+        }),
+        new Paragraph({
+          children: [
+            new TextRun({ text: "Ensino Primário - Escola Alvino Bittencourt (Concluído)", size: 22 }),
+          ],
+        }),
+        new Paragraph({ text: "" }),
+
+        // Habilidades
+        new Paragraph({
+          heading: HeadingLevel.HEADING_1,
+          children: [
+            new TextRun({
+              text: "HABILIDADES",
+              bold: true,
+              size: 32,
+              color: "00B4D8",
+            }),
+          ],
+        }),
+        new Paragraph({
+          children: [
+            new TextRun({
+              text: [".NET", "C#", "JAVASCRIPT", "SQL SERVER", "GIT", "HTML5", "CSS3", "COBOL", "ASPNET.MVC", "ASPNET.CORE", "VB6", "VB.NET"].join(" • "),
+              size: 22,
+            }),
+          ],
+        }),
+        new Paragraph({ text: "" }),
+
+        // Experiência
+        new Paragraph({
+          heading: HeadingLevel.HEADING_1,
+          children: [
+            new TextRun({
+              text: "EXPERIÊNCIA PROFISSIONAL",
+              bold: true,
+              size: 32,
+              color: "00B4D8",
+            }),
+          ],
+        }),
+        ...experiences.flatMap(exp => [
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: `${exp.role} - ${exp.company}`,
+                bold: true,
+                size: 24,
+              }),
+            ],
+          }),
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: exp.period,
+                size: 20,
+                color: "646464",
+              }),
+            ],
+          }),
+          ...exp.bullets.map(bullet => new Paragraph({
+            children: [
+              new TextRun({
+                text: bullet,
+                size: 22,
+              }),
+            ],
+            bullet: { level: 0 },
+          })),
+          new Paragraph({ text: "" }),
+        ]),
+
+        // Cursos e Certificações
+        new Paragraph({
+          heading: HeadingLevel.HEADING_1,
+          children: [
+            new TextRun({
+              text: "CURSOS E CERTIFICAÇÕES",
+              bold: true,
+              size: 28, // 14pt to match PDF
+              color: "00B4D8",
+            }),
+          ],
+        }),
+        new Table({
+          width: { size: 100, type: WidthType.PERCENTAGE },
+          borders: {
+            top: { style: BorderStyle.NONE },
+            bottom: { style: BorderStyle.NONE },
+            left: { style: BorderStyle.NONE },
+            right: { style: BorderStyle.NONE },
+            insideHorizontal: { style: BorderStyle.NONE },
+            insideVertical: { style: BorderStyle.NONE },
+          },
+          rows: Array.from({ length: Math.ceil(certificates.slice(0, 70).length / 2) }, (_, i) => {
+            const cert1 = certificates[i * 2];
+            const cert2 = certificates[i * 2 + 1];
+            return new TableRow({
+              children: [
+                new TableCell({
+                  children: [new Paragraph({
+                    children: [new TextRun({ text: cert1 ? `• ${cert1.title}` : "", size: 20 })],
+                  })],
+                  width: { size: 50, type: WidthType.PERCENTAGE },
+                }),
+                new TableCell({
+                  children: [new Paragraph({
+                    children: [new TextRun({ text: cert2 ? `• ${cert2.title}` : "", size: 20 })],
+                  })],
+                  width: { size: 50, type: WidthType.PERCENTAGE },
+                }),
+              ],
+            });
+          }),
+        }),
+        new Paragraph({ text: "" }),
+        new Paragraph({
+          alignment: AlignmentType.CENTER,
+          children: [
+            new TextRun({
+              text: "Para acessar todos os cursos acesse a versão digital: www.ricardo.com.br",
+              size: 16,
+              color: "969696",
+            }),
+          ],
+        }),
+      ],
+    }],
+  });
+
+  Packer.toBlob(doc).then(blob => {
+    saveAs(blob, "Curriculo_Ricardo_Furtado_Reis.docx");
+  });
+};
+
+docxBtn?.addEventListener('click', generateDOCX);
+mobileDocxBtn?.addEventListener('click', generateDOCX);
