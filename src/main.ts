@@ -523,7 +523,7 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
 const printBtn = document.getElementById('print-btn');
 printBtn?.addEventListener('click', () => {
   const doc = new jsPDF();
-  const margin = 20;
+  const margin = 15;
   let y = margin;
   const pageWidth = doc.internal.pageSize.getWidth();
   const pageHeight = doc.internal.pageSize.getHeight();
@@ -538,107 +538,147 @@ printBtn?.addEventListener('click', () => {
   };
 
   // Header
-  doc.setFontSize(22);
+  doc.setFontSize(26);
   doc.setTextColor(0, 180, 216); // Cyan
   doc.text('RICARDO FURTADO REIS', margin, y);
-  y += 10;
+  y += 8;
   
-  doc.setFontSize(12);
+  doc.setFontSize(14);
   doc.setTextColor(100);
   doc.text('Desenvolvedor de Sistemas', margin, y);
-  y += 15;
+  y += 10;
 
   // Contact Info
-  doc.setFontSize(10);
+  doc.setFontSize(11);
   doc.setTextColor(0);
   doc.text('WhatsApp: (011) 98363-2445', margin, y);
-  y += 6;
+  y += 5;
   doc.text('Email: ricreis71@gmail.com', margin, y);
-  y += 6;
+  y += 5;
   doc.text('LinkedIn: linkedin.com/in/ricardo-furtado-reis-04a47314a/', margin, y);
-  y += 6;
+  y += 5;
   doc.text('GitHub: github.com/RicardoFreis', margin, y);
-  y += 15;
+  y += 10;
 
   // Sobre
-  doc.setFontSize(14);
+  doc.setFontSize(16);
   doc.setTextColor(0, 180, 216);
   doc.text('SOBRE', margin, y);
-  y += 8;
-  doc.setFontSize(10);
+  y += 6;
+  doc.setFontSize(11);
   doc.setTextColor(0);
-  const sobreText = "Desenvolvedor de sistemas com experiência em projetos financeiros, automação comercial e integração de sistemas. Focado em entregar código limpo e soluções eficientes.";
+  const sobreText = "Desenvolvedor de sistemas com mais de 8 anos de experiência. Focado em entregar código limpo e soluções eficientes.";
   const splitSobre = doc.splitTextToSize(sobreText, pageWidth - (margin * 2));
   doc.text(splitSobre, margin, y);
   y += (splitSobre.length * 5) + 10;
 
+  // Educação
+  checkNewPage(30);
+  doc.setFontSize(16);
+  doc.setTextColor(0, 180, 216);
+  doc.text('EDUCAÇÃO', margin, y);
+  y += 6;
+  doc.setFontSize(11);
+  doc.setTextColor(0);
+  doc.text('Engenharia da Computação - Universidade São Judas Tadeu (Não concluído, encerrado no 2o ano)', margin, y);
+  y += 5;
+  doc.text('Processamento de Dados - Colégio Brasil (Concluído)', margin, y);
+  y += 5;
+  doc.text('Ensino Primário - Escola Alvino Bittencourt (Concluído)', margin, y);
+  y += 10;
+
+  // Habilidades
+  checkNewPage(30);
+  doc.setFontSize(16);
+  doc.setTextColor(0, 180, 216);
+  doc.text('HABILIDADES', margin, y);
+  y += 8;
+  doc.setFontSize(11);
+  doc.setTextColor(0);
+  const skills = [".NET", "C#", "JAVASCRIPT", "SQL SERVER", "GIT", "HTML5", "CSS3", "COBOL", "ASPNET.MVC", "ASPNET.CORE", "VB6", "VB.NET"];
+  const colWidth = (pageWidth - margin * 2) / 4;
+  
+  for (let i = 0; i < skills.length; i += 4) {
+    doc.text(`• ${skills[i]}`, margin, y);
+    if (skills[i+1]) doc.text(`• ${skills[i+1]}`, margin + colWidth, y);
+    if (skills[i+2]) doc.text(`• ${skills[i+2]}`, margin + colWidth * 2, y);
+    if (skills[i+3]) doc.text(`• ${skills[i+3]}`, margin + colWidth * 3, y);
+    y += 5;
+  }
+  y += 10;
+
   // Experiência
-  doc.setFontSize(14);
+  doc.setFontSize(16);
   doc.setTextColor(0, 180, 216);
   doc.text('EXPERIÊNCIA PROFISSIONAL', margin, y);
-  y += 8;
+  y += 6;
 
   const experiences = [
     { 
       company: 'Atos Brasil', 
       role: 'Analista Programador', 
-      period: '2021 - 2024',
-      description: 'Projetos financeiros internos (PT, ES, EN); Locação Volkswagen (XML/SQL/Notas Fiscais); Locação CPFL Energia (Scripts/Manutenção).'
+      period: '01/12/2021 - 10/07/2024',
+      bullets: [
+        'Projetos financeiros internos: Criação, manutenção e relatórios Excel; Tradução do sistema para 3 idiomas (PT, ES, EN); Cálculos de custos, despesas e receitas.',
+        'Locação Volkswagen: Projeto na campanha do carro Polo de 2023; Processamento de arquivos XML para base SQL e geração de notas fiscais; Relatórios Excel.',
+        'Locação CPFL Energia: Geração de scripts para criação de registros e alterações de dados; Manutenção de sistemas e relatórios.'
+      ]
     },
     { 
       company: 'Hayashi Informática', 
       role: 'Analista Programador', 
-      period: '2017',
-      description: 'Automação comercial; API para cupom fiscal eletrônico; SAT-CF-e.'
+      period: '06/03/2017 - 20/10/2017',
+      bullets: [
+        'Desenvolvimento completo de um sistema de automação comercial.',
+        'Implementação de API para cálculo e emissão de cupom fiscal eletrônico.',
+        'Implementação de SAT-CF-e (Sistema Autenticador e Transmissor de Cupons Fiscais Eletrônicos).'
+      ]
     },
     { 
       company: 'Cedesi Informática', 
       role: 'Programador', 
-      period: '2000 - 2003',
-      description: 'Sistemas legados e novos: Contas a pagar/receber, Faturamento, Farmácia, Folha, Estoque e Contabilidade.'
+      period: '02/05/2000 - 17/02/2003',
+      bullets: [
+        'Criação, manutenção e relatórios de diversos sistemas legados e novos.',
+        'Sistemas atendidos: Contas a pagar/receber, Faturamento, Automação de Farmácia, Folha de Pagamento, Contas Correntes, Controle de Estoque e Contabilidade.'
+      ]
     },
     { 
       company: 'Cedesi Informática', 
       role: 'Programador', 
-      period: '1991 - 1996',
-      description: 'Sistemas legados e novos: Contas a pagar/receber, Faturamento, Farmácia, Folha, Estoque e Contabilidade.'
+      period: '01/04/1991 - 15/01/1996',
+      bullets: [
+        'Criação, manutenção e relatórios de diversos sistemas legados e novos.',
+        'Sistemas atendidos: Contas a pagar/receber, Faturamento, Automação de Farmácia, Folha de Pagamento, Contas Correntes, Controle de Estoque e Contabilidade.'
+      ]
     }
   ];
 
   experiences.forEach(exp => {
-    checkNewPage(25);
-    doc.setFontSize(11);
+    checkNewPage(35);
+    doc.setTextColor(0);
+    doc.setFontSize(12);
     doc.setFont('helvetica', 'bold');
     doc.text(`${exp.role} - ${exp.company}`, margin, y);
     y += 5;
     doc.setFont('helvetica', 'normal');
-    doc.setFontSize(9);
+    doc.setFontSize(10);
     doc.setTextColor(100);
     doc.text(exp.period, margin, y);
-    y += 5;
+    y += 6;
     doc.setTextColor(0);
-    doc.setFontSize(9);
-    const splitDesc = doc.splitTextToSize(exp.description, pageWidth - (margin * 2));
-    doc.text(splitDesc, margin, y);
-    y += (splitDesc.length * 5) + 5;
+    doc.setFontSize(11);
+    
+    exp.bullets.forEach(bullet => {
+      const splitBullet = doc.splitTextToSize(`• ${bullet}`, pageWidth - (margin * 2) - 5);
+      checkNewPage(splitBullet.length * 6);
+      doc.text(splitBullet, margin, y);
+      y += (splitBullet.length * 5.5) + 2;
+    });
+    y += 3;
   });
 
-  y += 5;
-
-  // Educação
-  checkNewPage(30);
-  doc.setFontSize(14);
-  doc.setTextColor(0, 180, 216);
-  doc.text('EDUCAÇÃO', margin, y);
-  y += 8;
-  doc.setFontSize(10);
-  doc.setTextColor(0);
-  doc.text('Engenharia da Computação - Universidade São Judas Tadeu (Não concluído, encerrado no 2o ano)', margin, y);
-  y += 6;
-  doc.text('Processamento de Dados - Colégio Brasil (Concluído)', margin, y);
-  y += 6;
-  doc.text('Ensino Primário - Escola Alvino Bittencourt (Concluído)', margin, y);
-  y += 15;
+  y += 10;
 
   // Cursos e Certificações
   checkNewPage(30);
@@ -646,7 +686,7 @@ printBtn?.addEventListener('click', () => {
   doc.setTextColor(0, 180, 216);
   doc.text('CURSOS E CERTIFICAÇÕES', margin, y);
   y += 8;
-  doc.setFontSize(8);
+  doc.setFontSize(10);
   doc.setTextColor(0);
 
   // List more certificates to fill 2nd page
@@ -655,7 +695,7 @@ printBtn?.addEventListener('click', () => {
   const col2X = margin + (pageWidth - margin * 2) / 2;
   
   for (let i = 0; i < topCerts.length; i += 2) {
-    if (checkNewPage(6)) {
+    if (checkNewPage(7)) {
       // If we are on page 3, stop
       if (doc.getNumberOfPages() > 2) {
         // Remove the last page if it's empty or just started
@@ -666,15 +706,15 @@ printBtn?.addEventListener('click', () => {
       doc.setTextColor(0, 180, 216);
       doc.text('CURSOS E CERTIFICAÇÕES (Cont.)', margin, y);
       y += 8;
-      doc.setFontSize(8);
+      doc.setFontSize(10);
       doc.setTextColor(0);
     }
     
-    doc.text(`• ${topCerts[i].title.substring(0, 55)}`, col1X, y);
+    doc.text(`• ${topCerts[i].title.substring(0, 48)}`, col1X, y);
     if (topCerts[i+1]) {
-      doc.text(`• ${topCerts[i+1].title.substring(0, 55)}`, col2X, y);
+      doc.text(`• ${topCerts[i+1].title.substring(0, 48)}`, col2X, y);
     }
-    y += 4;
+    y += 6;
   }
 
   // Footer
