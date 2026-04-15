@@ -382,17 +382,43 @@ function renderStats() {
   `;
 }
 
+// Unified Scroll Function
+const scrollToSection = (targetId: string) => {
+  if (!targetId || targetId === '#') {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    return;
+  }
+  
+  const targetElement = document.querySelector(targetId) as HTMLElement;
+  if (targetElement) {
+    const nav = document.querySelector('nav');
+    // Use getBoundingClientRect for sub-pixel precision and include borders
+    const navHeight = nav ? nav.getBoundingClientRect().height : 0;
+    
+    // Calculate absolute position
+    const bodyRect = document.body.getBoundingClientRect();
+    const elementRect = targetElement.getBoundingClientRect();
+    const offset = elementRect.top - bodyRect.top;
+    
+    const offsetPosition = offset - navHeight;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+};
+
 function updateUI(scroll = true) {
   renderCertificates();
   renderPagination();
   renderStats();
   
   if (scroll) {
-    // Scroll to section start on page change
-    const section = document.getElementById('certificacoes');
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    scrollToSection('#certificacoes');
   }
 }
 
@@ -476,29 +502,10 @@ mobileLinks.forEach(link => {
     
     closeMobileMenu();
     
-    if (targetId && targetId !== '#') {
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        // Delay scroll slightly to allow menu closing animation to start and finish
-        setTimeout(() => {
-          const nav = document.querySelector('nav');
-          const navHeight = nav ? nav.offsetHeight : 0;
-          const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-          const offsetPosition = elementPosition - navHeight;
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }, 350);
-      }
-    } else {
-      // If targetId is '#' (Inicio), scroll to top
+    if (targetId) {
+      // Delay scroll slightly to allow menu closing animation to start and finish
       setTimeout(() => {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
+        scrollToSection(targetId);
       }, 350);
     }
   });
@@ -509,25 +516,8 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     const targetId = this.getAttribute('href');
-    if (targetId && targetId !== '#') {
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        const nav = document.querySelector('nav');
-        const navHeight = nav ? nav.offsetHeight : 0;
-        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-        const offsetPosition = elementPosition - navHeight;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
-    } else {
-      // If targetId is '#' (Inicio), scroll to top
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+    if (targetId) {
+      scrollToSection(targetId);
     }
   });
 });
